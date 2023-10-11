@@ -8,6 +8,8 @@ repositório do grupo seniors para a nossa primeira atividade preparatória para
 Desenvolver uma aplicação web utilizando Django que simule uma biblioteca virtual para empréstimos de livros digitais. A aplicação deverá permitir que os usuários possam visualizar, emprestar e devolver livros digitais.
 
 ## Requisitos:
+   - python v-3.10.12
+   - django v-3.8
 
 ### 1. Modelagem de Dados:
    - Cada livro digital será representado por um dicionário com as seguintes informações: título, autor, editora, ano de publicação e status (disponível ou emprestado).
@@ -67,6 +69,22 @@ livro_emprestado = {
 
 Lembre-se de que, para implementar esta aplicação, você precisará do framework Django e deve seguir as melhores práticas de desenvolvimento web para garantir a segurança e a eficiência da aplicação. Boa sorte!
 
-### - Daily (11/10):
+---------------------------------------------------------------------------------------------------------------------------
+### - Daily 11/10/2023:
+
+### O que fizemos ontem?
    - Ontem o intuito da aula foi mais para explicar o uso do git no nosso projeto, vimos sobre os comandos gits que usaremos para fazer o merge, as branchs, e etc.
+
+### O que faremos hoje?
+   - Hoje começaremos a falar mais sobre o projeto em si
+
+### O que está nos impedindo?
    - Atualmente o que está nos impedindo é a impossibilidade de alguns alunos de comparecerem a aula. 
+---------------------------------------------------------------------------------------------------------------------------
+### Integrantes da equipe:
+   - Ryan W.
+   - Isabela R.
+   - Bernardo F.
+   - Ana Alice
+   - Victor G.
+---------------------------------------------------------------------------------------------------------------------------
