@@ -77,9 +77,12 @@ Lembre-se de que, para implementar esta aplicação, você precisará do framewo
 
 ### O que faremos hoje?
    - Hoje começaremos a falar mais sobre o projeto em si
+   - Planejar os menus e layout
+   - Distribuição de tarefas.
 
 ### O que está nos impedindo?
-   - Atualmente o que está nos impedindo é a impossibilidade de alguns alunos de comparecerem a aula. 
+   - Atualmente o que está nos impedindo é a impossibilidade de alguns alunos de comparecerem a aula.
+   - ISSO NAO PODE APARECER AQUI
 ---------------------------------------------------------------------------------------------------------------------------
 ### Integrantes da equipe:
    - Ryan W.
