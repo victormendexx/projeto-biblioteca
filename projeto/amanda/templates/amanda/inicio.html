@@ -3,31 +3,118 @@
 <html>
 <head>
     <style>
-        .logo {
-            max-width: 50%;
-            height: 150px;
-            display: block;
-            margin: auto;
+        /* Reset padrão para remover margens e preenchimentos */
+        html, body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
         }
+
+        /* Defina uma cor de plano de fundo para o corpo da página */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0; /* Remova a margem padrão do body */
+            padding: 0; /* Remova o preenchimento padrão do body */
+            display: flex; /* Use flexbox para layout vertical */
+            flex-direction: column; /* Empilhe os elementos verticalmente */
+        }
+
+        /* Estilize o cabeçalho */
+        header {
+            background-color: #f0f0f0;
+            color: #fff;
+            padding: 0px;
+            text-align: center;
+            display: flex; /* Use flexbox para layout horizontal */
+            justify-content: center; /* Alinhe os elementos horizontalmente */
+            align-items: center; /* Alinhe os elementos verticalmente */
+        }
+
+        /* Estilize a imagem do logo no cabeçalho */
+        .logo {
+            height: 170px;
+            display: auto;
+            margin: 0px;
+        }
+
+        /* Estilize a barra de navegação */
+        nav {
+            color: #000000; /* Cor do texto */
+            padding: 10px; /* Preenchimento interno */
+            text-align: center;
+            display: flex;
+            justify-content: center; /* Centralize horizontalmente */
+            align-items: center; /* Centralize verticalmente */
+        }
+
+        /* Estilize os links na barra de navegação (substitua 'a' pelo seletor correto se necessário) */
+        nav a {
+            text-decoration: none; /* Remova sublinhado dos links */
+            color: #000000; /* Cor do texto dos links */
+            margin: 0 20px; /* Adicione margem horizontal entre os links */
+        }
+
+        /* Estilize o conteúdo principal */
+        main {
+            padding: 20px;
+        }
+
+        /* Estilize o banner */
+        .banner {
+            text-align: center; /* Centralize o conteúdo horizontalmente */
+            background-color: #f0f0f0; /* Cor de fundo do banner */
+            padding: 0px; /* Adicione preenchimento interno */
+        }
+
+        /* Estilize a imagem do banner */
+        .banner img {
+            max-width: 60%; /* Garanta que a imagem não ultrapasse a largura do banner */
+            height: auto; /* Mantenha a proporção original da imagem */
+        }
+
+        /* Estilize o rodapé */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página de Exemplo</title>
+    <style>
+        /* Seus estilos personalizados podem ser adicionados aqui */
     </style>
 </head>
 <body>
     <header>
-        <img src="{% static 'img/logo.png' %}" alt="Logo seniors" class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="Logo Seniors" class="logo">
+        <nav>
+            {% block navbar %}
+                {% include 'amanda/nav.html' %}
+            {% endblock %}
+        </nav>
     </header>
 
-    {% block navbar %}
-       {% include 'amanda/nav.html' %}
-    {% endblock %}
-
     <main>
-        {% block content %}
-        <!-- O conteúdo específico de cada página será inserido aqui -->
-        {% endblock %}
+        <section class="content">
+            <h1>Bem-vindo à Página de Exemplo</h1>
+            <p>Esta é uma página de exemplo para o nosso site.</p>
+
+            <h2>Seção 1</h2>
+            <p>Aqui está o conteúdo da primeira seção.</p>
+
+            <h2>Seção 2</h2>
+            <p>E aqui está o conteúdo da segunda seção.</p>
+        </section>
     </main>
 
     <footer>
-        <p>Copyright © 2023</p>
+        <p>&copy; 2023 Seniors</p>
     </footer>
 </body>
 </html>
