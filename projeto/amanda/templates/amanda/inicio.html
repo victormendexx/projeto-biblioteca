@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .logo {
+            max-width: 50%;
+            height: 150px;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{% static 'img/logo.png' %}" alt="Logo seniors" class="logo">
+    </header>
+
+    {% block navbar %}
+       {% include 'amanda/nav.html' %}
+    {% endblock %}
+
+    <main>
+        {% block content %}
+        <!-- O conteúdo específico de cada página será inserido aqui -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>Copyright © 2023</p>
+    </footer>
+</body>
+</html>
