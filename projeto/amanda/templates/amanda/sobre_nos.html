@@ -1,0 +1,25 @@
+{% extends "amanda/base.html" %}
+
+{% block content %}
+<h1>Sobre Nós</h1>
+<p>Aqui vai ficar o texto do nosso grupo</p>
+
+<img src="imagem.jpeg" alt="Aqui ficaria a imagem, porem ainda nao sei como adicionar no Django">
+
+<h2>Deixe um Comentário</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enviar Comentário</button>
+</form>
+
+<h2>Comentários Anteriores</h2>
+<ul>
+    {% for comment in comments %}
+        <li>
+            <strong>{{ comment.name }} disse:</strong>
+            <p>{{ comment.text }}</p>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

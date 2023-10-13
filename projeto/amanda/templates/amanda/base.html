@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+</head>
+<body>
+    <header>
+        <h1>Trabalho do grupo Sêniors</h1>
+    </header>
+    {% block navbar %}
+       {% include 'amanda/nav.html' %}
+    {% endblock %}
+
+    <main>
+        {% block content %}
+        <!-- O conteúdo específico de cada página será inserido aqui -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2023 Grupo Sêniors</p>
+    </footer>
+</body>
+</html>
