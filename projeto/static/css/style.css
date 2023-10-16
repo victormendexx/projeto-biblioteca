@@ -47,7 +47,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #0073e6; /* Cor de destaque ao passar o mouse */
+    color: #6be446; /* Cor de destaque ao passar o mouse */
 }
 
 /* Estilize o conteúdo principal */
@@ -115,13 +115,6 @@ a:hover {
     color: #0053a6; /* Cor de destaque ao passar o mouse */
 }
 
-/* Estilize o formulário de sugestões */
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: auto;
-    
-}
 
 /* Estilize o botão de envio do formulário */
 button[type="submit"] {
