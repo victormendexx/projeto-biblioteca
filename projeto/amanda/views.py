@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import CommentForm
+from .dicio import dicionario_principal
 
 def inicio(request):
     return render(request, 'amanda/inicio.html')
@@ -26,3 +27,6 @@ def avaliacoes(request):
 
 def sobre(request):
     return render(request, 'amanda/sobre.html')
+
+def mostrar_livros(request):
+    return render(request, 'amanda/catalago.html', {'livros': dicionario_principal})

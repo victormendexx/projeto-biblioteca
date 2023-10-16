@@ -154,6 +154,53 @@ footer {
     content: "\2605"; /* Código da estrela preenchida no Unicode */
     color: #FFD700; /* Cor das estrelas preenchidas */
 }
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
+/* Estilize os blocos de livro no catálogo */
+.livro-catalogo {
+    width: 48%; /* Para que dois livros se encaixem na mesma linha */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.livro-catalogo:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Efeito de destaque ao passar o mouse */
+}
+
+/* Estilize os detalhes do livro no catálogo */
+.livro-catalogo h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.livro-catalogo p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* Estilize o link "Pedir Empréstimo" */
+.livro-catalogo a {
+    background-color: #6be446;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: block;
+    margin: 10px auto;
+    transition: background-color 0.3s;
+}
+
+.livro-catalogo a:hover {
+    background-color: #5cc03d; /* Cor de destaque ao passar o mouse */
+}
 
 
