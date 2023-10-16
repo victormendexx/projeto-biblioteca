@@ -1,5 +1,19 @@
 from django.shortcuts import render
 from .forms import CommentForm
+from django.contrib.auth.views import LoginView, LogoutView
+
+
+class LoginViewClass(LoginView):
+    """ 
+        Login View Class """
+    template_name = 'main/base_login.html'
+    
+
+class LogoutViewClass(LogoutView):
+    """
+        Simple Logout View Class"""
+    next_page = '/'  # 'home' is the url name of your ho
+
 
 def inicio(request):
     return render(request, 'amanda/inicio.html')
