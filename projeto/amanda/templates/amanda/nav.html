@@ -1,7 +1,12 @@
 <nav>
     <ul style="list-style: none; display: flex; padding: 0;">
+        {% if user.is_authenticated %}
         <li style="margin-right: 20px;"><a href="/">Início</a></li>
         <li style="margin-right: 20px;"><a href="/">Catálogo</a></li>
         <li style="margin-right: 20px;"><a href="/sugestoes">Sugestões</a></li>
+        <li><a href="{% url 'logout' %}" class="nav-link">Logout</a></li> 
+        {% else %}               
+        <li><a href="{% url 'login'%}" class="nav-link">Login</a></li> 
+     {% endif %}
     </ul>
 </nav>

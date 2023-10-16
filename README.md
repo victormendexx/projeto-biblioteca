@@ -1,3 +1,3 @@
 # e2123-e2-seniors
-esse é repositório do grupo seniors para a nossa primeira atividade preparatória para o TCC.
-g
+## repositório do grupo seniors para a nossa primeira atividade preparatória para o TCC.
+### webapp para livros
