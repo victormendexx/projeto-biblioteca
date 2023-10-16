@@ -21,13 +21,13 @@
             <h2>Livros em Destaque</h2>
             {% for titulo, detalhes in livros.items %}
                 <div class="livro">
-                    <img src="imagem_livro.jpg" alt="{{ titulo }}">
-                    <h3>{{ titulo }}</h3>
+                    <img src="imagem_livro.jpg" alt="{{ detalhes.titulo }}">
+                    <h3>{{ detalhes.titulo }}</h3>
                     <p>Autor: {{ detalhes.autor }}</p>
                     <p>Gênero: {{ detalhes.genero }}</p>
-                    <p>Data de Publicação: {{ detalhes.data_publicacao }}</p>
+                    <p>Ano de Publicação: {{ detalhes.ano_publicacao }}</p>
                     <p>Idioma: {{ detalhes.idioma}}</p>
-                    <a href="#">{{ titulo }}</a>
+                    <a href="#">Pedir Emprestimo</a>
                 </div>
             {% endfor %}
         </section>
