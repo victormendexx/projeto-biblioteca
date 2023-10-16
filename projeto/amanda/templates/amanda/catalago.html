@@ -1,0 +1,37 @@
+{% extends "amanda/base.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site de Livros Digitais</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Nosso Site de Livros Digitais</h1>
+        <p>Descubra uma vasta coleção de livros digitais emocionantes.</p>
+    </header>
+    <main>
+        <section class="destaques">
+            <h2>Livros em Destaque</h2>
+            {% for titulo, detalhes in livros.items %}
+                <div class="livro">
+                    <img src="imagem_livro.jpg" alt="{{ titulo }}">
+                    <h3>{{ titulo }}</h3>
+                    <p>Autor: {{ detalhes.autor }}</p>
+                    <p>Gênero: {{ detalhes.genero }}</p>
+                    <p>Data de Publicação: {{ detalhes.data_publicacao }}</p>
+                    <p>Idioma: {{ detalhes.idioma}}</p>
+                    <a href="#">{{ titulo }}</a>
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+</body>
+</html>
+{% endblock %}
