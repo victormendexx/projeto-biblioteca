@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página de Exemplo</title>
+    <style>
+        /* Seus estilos personalizados podem ser adicionados aqui */
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{% static 'img/logo.png' %}" alt="Logo Seniors" class="logo">
+        <nav>
+            {% block navbar %}
+                {% include 'amanda/nav.html' %}
+            {% endblock %}
+        </nav>
+    </header>
+    <!DOCTYPE html>
+    
+        <html>
+        <main>
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+        </body>
+        </html>
+
+    <footer>
+        <p>&copy; 2023 Seniors</p>
+    </footer>
+</body>
+</html>

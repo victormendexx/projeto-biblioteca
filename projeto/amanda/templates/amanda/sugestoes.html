@@ -1,0 +1,26 @@
+{% extends "amanda/base.html" %}
+{% load static %}
+{% block content %}
+<main>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <h1>Sugestões</h1>
+    <p>Nos de sugestões de melhorias</p>
+
+    <h2>Deixe sua sugestão</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar Sugestão</button>
+    </form>
+        <h2>Sugestões Anteriores</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>
+                <strong>{{ comment.name }} disse:</strong>
+                <p>{{ comment.text }}</p>
+                </li>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock %}
