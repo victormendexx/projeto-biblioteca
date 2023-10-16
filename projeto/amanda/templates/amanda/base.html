@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="{% static 'img/logo.png' %}" alt="Logo Seniors" class="logo">
 </head>
 <body>
     <header>
-        <img src="{% static 'img/logo.png' %}" alt="Logo Seniors" class="logo">
         <nav>
             {% block navbar %}
                 {% include 'amanda/nav.html' %}

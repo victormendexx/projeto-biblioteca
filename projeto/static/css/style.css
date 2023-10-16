@@ -12,13 +12,21 @@ body {
     color: #000000;
     display: flex;
     flex-direction: column;
-}   
+}
 
-/* Estilize a imagem da logo no cabeçalho */
-header .logo {
-            height: 100px;
-            display: auto;
-            margin: 0px;
+/* Estilize a classe "logo" para ajustar o tamanho da imagem */
+/* Estilize a classe "logo" para ajustar o tamanho e centralizá-la */
+.logo {
+    max-width: 100%; /* Ajuste o tamanho máximo para o tamanho original da imagem */
+    height: 150px; /* Isso manterá a proporção da imagem */
+    display: block; /* Torna a imagem um bloco para centralizá-la facilmente */
+    margin: 0 auto; /* Margens automáticas horizontalmente para centralizar */
+}
+
+
+
+header {
+    text-align: center;
 }
 
 /* Estilize a barra de navegação */
@@ -54,6 +62,8 @@ main {
 }
 
 /* Estilize os destaques de livros */
+/* Estilize os destaques de livros */
+/* Estilize os destaques de livros */
 .destaques {
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +72,10 @@ main {
 }
 
 /* Estilize os blocos de livro */
+/* Estilize os blocos de livro */
 .livro {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     border: 1px solid #ccc;
     padding: 10px;
@@ -71,24 +84,18 @@ main {
     transition: box-shadow 0.3s;
 }
 
-.livro:hover {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Efeito de destaque ao passar o mouse */
-}
-
-.livro img {
-    max-width: 100%;
+/* Estilize a imagem do livro */
+.livro-imagem {
+    max-width: 150px;
     height: auto;
 }
 
-.livro h3 {
-    font-size: 18px;
-    margin-top: 10px;
+/* Estilize as informações do livro */
+.livro-info {
+    flex: 1;
+    padding: 10px;
 }
 
-.livro p {
-    font-size: 14px;
-    margin: 10px 0;
-}
 
 /* Estilize o rodapé */
 footer {
@@ -98,31 +105,55 @@ footer {
     padding: 11px;
 }
 
-/* Estilos para links */
-a {
-    color: #0073e6;
-    text-decoration: none;
-    transition: color 0.3s;
+/* Estilize o título das avaliações */
+/* Adicione os estilos específicos para a página de avaliações */
+/* Estilize o título das avaliações */
+.avaliacao-titulo {
+    font-size: 24px;
+    margin-top: 20px;
 }
 
-a:hover {
-    color: #0053a6; /* Cor de destaque ao passar o mouse */
+/* Estilize a lista de avaliações anteriores */
+.avaliacoes-anteriores {
+    list-style: none;
+    padding: 0;
 }
 
+.avaliacoes-anteriores li {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
 
-/* Estilize o botão de envio do formulário */
-button[type="submit"] {
-    background-color: #0073e6;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+.avaliacoes-anteriores li strong {
+    font-weight: bold;
+}
+
+/* Estilize a classe para estrelas */
+.star-rating {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 1.5em;
+    color: #FFD700; /* Cor das estrelas preenchidas */
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-button[type="submit"]:hover {
-    background-color: #0053a6;
+.star-rating label:before {
+    content: "\2605"; /* Código da estrela vazia no Unicode */
 }
+
+.star-rating input[type="radio"]:checked + label:before {
+    content: "\2605"; /* Código da estrela preenchida no Unicode */
+    color: #FFD700; /* Cor das estrelas preenchidas */
+}
+
 
 

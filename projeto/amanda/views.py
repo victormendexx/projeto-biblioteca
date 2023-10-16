@@ -6,7 +6,7 @@ def inicio(request):
 
 comments = []
 
-def sugestoes(request):
+def avaliacoes(request):
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
@@ -22,4 +22,7 @@ def sugestoes(request):
         'form': form,
     }
 
-    return render(request, 'amanda/sugestoes.html', context)
+    return render(request, 'amanda/avaliacoes.html', context)
+
+def sobre(request):
+    return render(request, 'amanda/sobre.html')
