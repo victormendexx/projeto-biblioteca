@@ -1,0 +1,30 @@
+{% extends 'amanda/base.html' %}
+{% load static %}
+
+{% block content %}
+<form id="myForm" action="/login/" method="POST">
+  {% csrf_token %}
+  <div class="form-group">
+    <input
+      type="text"
+      id="username"
+      name="username"
+      class="form-control formfixsize btn-login"
+      required
+      value="User Name"
+    />
+  </div>
+  <div class="form-group">
+    <input
+      type="password"
+      id="password"
+      name="password"
+      class="form-control formfixsize btn-login"
+      required
+      value="Password"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary btnfixsize">Login</button>
+</form>
+
+{% endblock %}

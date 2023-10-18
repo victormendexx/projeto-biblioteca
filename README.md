@@ -81,3 +81,8 @@ Lembre-se de que, para implementar esta aplicação, você precisará do framewo
    - Bernardo F.
    - Ana Alice
    - Victor G.
+
+
+# 1 criar a entrada logout no nav
+# 2 buscar quais configuracoes de login_url no settings.py
+# 3 
