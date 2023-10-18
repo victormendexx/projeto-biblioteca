@@ -4,20 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <div>
-        <section class="img_logo">
-            <img src="{% static 'img/logo.png' %}" alt="Logo Seniors" class="logo">
-        </div>
-    <div>
-        <section class="nav_bar">
-            <nav>
-                {% block navbar %}
-                    {% include 'amanda/nav.html' %}
-                {% endblock %}
-            </nav>
-        </div>
+    <img src="{% static 'img/logo.png' %}" alt="Logo Seniors" class="logo">
 </head>
 <body>
+    <header>
+        <nav>
+            {% block navbar %}
+                {% include 'amanda/nav.html' %}
+            {% endblock %}
+        </nav>
+    </header>
     <!DOCTYPE html>
     
         <html>

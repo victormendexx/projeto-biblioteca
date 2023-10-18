@@ -4,9 +4,9 @@
         <li style="margin-right: 20px;"><a href="{% url 'catalogo'%}">Catálogo</a></li>
         <li style="margin-right: 20px;"><a href="/sobre">Sobre</a></li>
         {% if user.is_authenticated %}
-            <li><a href="{% url 'logout' %}" class="nav-link">Logout</a></li> 
+           <li><a href="{% url 'logout' %}" class="nav-link">Logout</a></li> 
         {% else %}               
-            <li><a href="{% url 'login'%}" class="nav-link">Login</a></li>
+            <li><a href="{% url 'login'%}" class="nav-link">Login</a></li> 
         {% endif %}
     </ul>
 </nav>

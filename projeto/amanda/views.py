@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import CommentForm
-from .dicio import dicionario_principal
 from django.contrib.auth.views import LoginView, LogoutView
+from .dicio import dicionario_principal
 
 
 class LoginViewClass(LoginView):
