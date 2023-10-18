@@ -17,7 +17,10 @@ body {
 /* Estilize a classe "logo" para ajustar o tamanho da imagem */
 /* Estilize a classe "logo" para ajustar o tamanho e centralizá-la */
 .logo {
-    display: block;
+    max-width: 100%; /* Ajuste o tamanho máximo para o tamanho original da imagem */
+    height: 150px; /* Isso manterá a proporção da imagem */
+    display: block; /* Torna a imagem um bloco para centralizá-la facilmente */
+    margin: 0 auto; /* Margens automáticas horizontalmente para centralizar */
 }
 
 
