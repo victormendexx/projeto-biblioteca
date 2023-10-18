@@ -1,5 +1,7 @@
-{% extends 'amanda/base.html' %} {% block content %}
+{% extends 'amanda/base.html' %} 
 {% load static %}
+
+{% block content %}
 <form id="myForm" action="/login/" method="POST">
   {% csrf_token %}
   <div class="form-group">

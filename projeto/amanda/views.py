@@ -6,7 +6,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 class LoginViewClass(LoginView):
     """ 
         Login View Class """
-    template_name = 'main/base_login.html'
+    template_name = 'amanda/base_login.html'
     
 
 class LogoutViewClass(LogoutView):
@@ -14,13 +14,14 @@ class LogoutViewClass(LogoutView):
         Simple Logout View Class"""
     next_page = '/'  # 'home' is the url name of your ho
 
+from .dicio import dicionario_principal
 
 def inicio(request):
     return render(request, 'amanda/inicio.html')
 
 comments = []
 
-def sugestoes(request):
+def avaliacoes(request):
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
@@ -36,4 +37,10 @@ def sugestoes(request):
         'form': form,
     }
 
-    return render(request, 'amanda/sugestoes.html', context)
+    return render(request, 'amanda/avaliacoes.html', context)
+
+def sobre(request):
+    return render(request, 'amanda/sobre.html')
+
+def mostrar_livros(request):
+    return render(request, 'amanda/catalago.html', {'livros': dicionario_principal})
