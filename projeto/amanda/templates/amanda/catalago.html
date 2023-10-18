@@ -2,33 +2,22 @@
 {% load static %}
 
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site de Livros Digitais</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-</head>
-<body>
-    <header>
-        <h1>Bem-vindo ao Catálogo</h1>
-        <p>Aqui você consegue adiquirir os mais atuais e empolgantes livros digitais.</p>
-    </header>
-    <main>
+        <form method="post">
+            {% csrf_token %}
+            {{ filtro_form.as_p }}
+            <button type="submit">Filtrar</button>
+        </form>
+        
         <section class="catalogo">
-            {% for titulo, detalhes in livros.items %}
+            {% for isbn, livro in livros.items %}
                 <div class="livro-catalogo">    
-                    <img src="imagem_livro.jpg" alt="{{ detalhes.titulo }}">
-                    <h3>{{ detalhes.titulo }}</h3>
-                    <p>Autor: {{ detalhes.autor }}</p>
-                    <p>Gênero: {{ detalhes.genero }}</p>
+                    <img src="imagem_livro.jpg" alt="{{ livro.titulo }}">
+                    <h3>{{ livro.titulo }}</h3>
+                    <p>Autor: {{ livro.autor }}</p>
+                    <p>Gênero: {{ livro.genero }}</p>
+                    <p>Ano de Publicação: {{ livro.ano_publicacao }}</p>
                     <a href="#">Pedir Empréstimo</a>
                 </div>
             {% endfor %}
         </section>
-    </main>
-</body>
-</html>
 {% endblock %}
