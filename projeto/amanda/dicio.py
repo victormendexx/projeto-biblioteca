@@ -10,7 +10,7 @@ dicionario_principal = {
     "livro2": {
         "titulo": "Harry Potter e a Pedra Filosofal",
         "autor": "J. K. Rowling",
-        "   genero": "Fantasia",
+        "genero": "Fantasia",
         "ano_publicacao": "1997",
         "idioma": "português",
         "imagem" : "img/harrypotter.jpg"

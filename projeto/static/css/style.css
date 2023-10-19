@@ -73,7 +73,7 @@ main {
 
 /* Estilize os blocos de livro */
 /* Estilize os blocos de livro */
-.livro {
+.livrodes {
     display: flex;
     flex-wrap: wrap;
     width: 100%;

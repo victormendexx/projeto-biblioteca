@@ -43,9 +43,5 @@ def avaliacoes(request):
 def sobre(request):
     return render(request, 'amanda/sobre.html')
 
-def mostrar_livros(request):
-    return render(request, 'amanda/catalago.html', {'livros': dicionario_principal})
-
-# def user_profile(request):
-#     user_profile = UserProfile.objects.get(user=request.user)
-#     return render(request, 'profiles/user_profile.html', {'user_profile': user_profile})
+def catalogo(request):
+    return render(request, 'amanda/catalogo.html', {'dicionario_principal': dicionario_principal})
