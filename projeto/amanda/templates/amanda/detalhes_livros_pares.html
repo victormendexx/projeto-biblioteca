@@ -1,0 +1,10 @@
+{% extends "amanda/base.html" %}
+{% block content %}
+<h2>Detalhes do Livro</h2>
+<img src="{{ livro.imagem }}" alt="{{ livro.titulo }}">
+<h3>{{ livro.titulo }}</h3>
+<p>Autor: {{ livro.autor }}</p>
+<p>Gênero: {{ livro.genero }}</p>
+<p>Ano de Publicação: {{ livro.ano_publicacao }}</p>
+<p>Idioma: {{} livro.idioma }</p>
+{% endblock %}
