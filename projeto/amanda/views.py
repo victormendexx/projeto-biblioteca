@@ -43,8 +43,8 @@ def avaliacoes(request):
 def sobre(request):
     return render(request, 'amanda/sobre.html')
 
-def mostrar_livros(request):
-    return render(request, 'amanda/catalago.html', {'livros': dicionario_principal})
+def catalogo(request):
+    return render(request, 'amanda/catalogo.html', {'livros': dicionario_principal})
 
 def detalhes_livros_pares(request, numero):
     chave = f"livro{numero}"
