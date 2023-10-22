@@ -114,6 +114,7 @@ main.cards-container {
     flex-direction: row; /* Para colocar os cards em linha */
     padding: 20px;
     background-color: #222;
+
 }
 
 .card {
@@ -194,18 +195,62 @@ main.cards-container {
 
 }
 
+.flip-card {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+  }
 
-/* Estilize a imagem do livro */
-.livro-imagem {
-    max-width: 150px;
-    height: auto;
-}
+  .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #00C2CB;
+    border-radius: 1rem;
+  }
 
-/* Estilize as informações do livro */
-.livro-info {
-    flex: 1;
-    padding: 10px;
-}
+  .flip-card-front {
+    color: #ffffff;
+  }
+  
+  .flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+  }
 
 
 /* Estilize o rodapé */
@@ -216,102 +261,28 @@ footer {
     padding: 11px;
 }
 
-/* Estilize o título das avaliações */
-/* Adicione os estilos específicos para a página de avaliações */
-/* Estilize o título das avaliações */
-.avaliacao-titulo {
-    font-size: 24px;
-    margin-top: 20px;
-}
-
-/* Estilize a lista de avaliações anteriores */
-.avaliacoes-anteriores {
-    list-style: none;
-    padding: 0;
-}
-
-.avaliacoes-anteriores li {
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #f9f9f9;
-}
-
-.avaliacoes-anteriores li strong {
-    font-weight: bold;
-}
-
-/* Estilize a classe para estrelas */
-.star-rating {
-    display: inline-block;
-    font-size: 24px;
-}
-
-.star-rating input[type="radio"] {
-    display: none;
-}
-
-.star-rating label {
-    font-size: 1.5em;
-    color: #FFD700; /* Cor das estrelas preenchidas */
-    cursor: pointer;
-}
-
-.star-rating label:before {
-    content: "\2605"; /* Código da estrela vazia no Unicode */
-}
-
-.star-rating input[type="radio"]:checked + label:before {
-    content: "\2605"; /* Código da estrela preenchida no Unicode */
-    color: #FFD700; /* Cor das estrelas preenchidas */
-}
-.catalogo {
+/* Estilos para o container de livros */
+.livros-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 20px;
+    max-width: 1000px; /* Define a largura máxima do container de livros */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
 }
 
-/* Estilize os blocos de livro no catálogo */
-.livro-catalogo {
-    width: 48%; /* Para que dois livros se encaixem na mesma linha */
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: #fff;
-    text-align: center;
-    transition: box-shadow 0.3s;
+/* Estilos para cada livro/card */
+.livro {
+    width: auto; /* Largura automática de acordo com o tamanho do conteúdo */
+    margin: 40px; /* Espaçamento entre os livros */
+    overflow: visible; /* Impede que o conteúdo vaze para fora do card */
+    border-radius: 20px; /* Borda arredondada para o card */
 }
 
-.livro-catalogo:hover {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Efeito de destaque ao passar o mouse */
+/* Estilos para a imagem do livro */
+.livro-image img {
+    max-width: 100%; /* A imagem se ajustará automaticamente ao card */
+    height: auto; /* A imagem manterá a proporção original */
+    display: block; /* Remove margens indesejadas e mantém a imagem alinhada */
+    border-radius: 20px; /* Borda arredondada para a imagem */
 }
-
-/* Estilize os detalhes do livro no catálogo */
-.livro-catalogo h3 {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.livro-catalogo p {
-    font-size: 14px;
-    margin: 10px 0;
-}
-
-/* Estilize o link "Pedir Empréstimo" */
-.livro-catalogo a {
-    background-color: #6be446;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    display: block;
-    margin: 10px auto;
-    transition: background-color 0.3s;
-}
-
-.livro-catalogo a:hover {
-    background-color: #5cc03d; /* Cor de destaque ao passar o mouse */
-}
-
 
