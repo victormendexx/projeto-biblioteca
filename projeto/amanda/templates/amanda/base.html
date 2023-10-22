@@ -7,9 +7,11 @@
 </head>
 <body>
     <header>
-        <div id="logo">
-            <h2>Seniors</h2>
-        </div>
+        <img src="{% static 'img/logo.png' %}" alt="Seniors Logo", class="logo">
+        <div class="search">
+            <input placeholder="Pesquisar..." type="text">
+            <button type="submit">Go</button>
+          </div>
         <nav>
             {% block navbar %}
                 {% include 'amanda/nav.html' %}

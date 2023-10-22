@@ -9,39 +9,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Site de Livros Digitais</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <img src="{% static 'img/banner.jpg' %}" alt="banner" class="banner">
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao Nosso Site de Livros Digitais</h1>
-        <p>Descubra uma vasta coleção de livros digitais emocionantes.</p>
-    </header>
-    <main>
-        <section class="destaques">
-            <h2>Livros em Destaque</h2>
-            <div class="livrodes">
-                <img src="{% static 'img/ohomemdegiz.jpg' %}" alt="O homem de giz" class="livro-imagem">
-                <div class="livro-info">
-                    <h3>O homem de giz</h3>
-                    <p>Gênero: Suspense</p>
-                    <p>Autor: C. J. Tudo</p>
-                    <p>Ano de publicação: 2018</p>
-                    <p>Sinopse: Em 2016, Eddie e seus amigos, já com certa idade, recebem uma carta com um desenho de um homem de giz enforcado. Ocorre, então, que um de seus amigos repentinamente aparece morto. Eddie não tem dúvidas de que precisa descobrir quem cometeu o crime e como isso se relaciona com o passado de 30 anos atrás.
-                    <a href="/livro1">Saiba mais</a>
-                </div>
+    <h2>DESTAQUES DA SEMANA</h2>
+    <main class="cards-container">
+        <div class="card">
+            <span>
+                <img src="{% static 'img/silmarillion.jpg' %}" alt="Imagem 1">
+            </span>
+            <div class="content">
             </div>
-            
-            <div class="livro">
-                <img src="{% static 'img/jogosvorazes.jpg' %}" alt="O homem de giz" class="livro-imagem">
-                <div class="livro-info">
-                    <h3>Jogos vorazes</h3>
-                    <p>Gênero: Ação</p>
-                    <p>Autor: Suzanne Collins </p>
-                    <p>Ano de publicação: 2012</p>
-                    <p>Sinopse: Na região antigamente conhecida como América do Norte, a Capital de Panem controla 12 distritos e os força a escolher um garoto e uma garota, conhecidos como tributos, para competir em um evento anual televisionado. Todos os cidadãos assistem aos temidos jogos, no qual os jovens lutam até a morte, de modo que apenas um saia vitorioso. A jovem Katniss Everdeen, do Distrito 12, confia na habilidade de caça e na destreza com o arco, além dos instintos aguçados, nesta competição mortal.
-                    <a href="/livro1">Saiba mais</a>
-                </div>
+        </div>
+        <div class="card">
+            <span>
+                <img src="{% static 'img/agarotanotrem.jpg' %}" alt="Imagem 2">
+            </span>
+            <div class="content">
             </div>
-        </section>
+        </div>
+        <div class="card">
+            <span>
+                <img src="{% static 'img/aculpaedasestrelas.jpg' %}" alt="Imagem 3">
+            </span>
+            <div class="content">
+            </div>
+        </div>
     </main>
 </body>
 </html>
