@@ -7,7 +7,7 @@
         <h1>Avaliações</h1>
 
         <h2 class="avaliacao-titulo">Deixe sua avaliação</h2>
-        <form method="post">
+        <form method="get">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Enviar Avaliação</button>

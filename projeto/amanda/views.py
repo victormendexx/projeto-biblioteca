@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import CommentForm
 from django.contrib.auth.views import LoginView, LogoutView
-from .dicio import dicionario_principal
+from .dicio import dicionario_principal, filtrar_por_genero
 from .forms import CatalogoFiltroForm
 # from .models import UserProfile 
 
@@ -51,11 +51,14 @@ def catalogo(request):
     if form.is_valid():
         genero = form.cleaned_data.get('genero')
         if genero:
-           pass
+            livros_filtrados = filtrar_por_genero(dicionario_principal, genero)
+        else:
+            livros_filtrados=dicionario_principal
 
-        context = {
-           'dicionario_principal': dicionario_principal,
-           'form': form,
+
+    context = {
+        'dicionario_principal': livros_filtrados,
+        'form': form,
     }
     return render(request, 'amanda/catalogo.html', context)
 
