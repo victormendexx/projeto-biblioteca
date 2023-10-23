@@ -115,19 +115,9 @@ def filtrar_por_genero(dicionario, genero):
 
 
 def obter_lista_generos(dicionario):
-    # Inicializando uma lista vazia para coletar os gêneros
-    lista_generos = []
-
-    # Iterando sobre cada item no dicionário fornecido
-    for isbn, detalhes in dicionario.items():
-        # Adicionando o gênero do item atual à lista
-        lista_generos.append(detalhes['genero'])
-
-    # Convertendo a lista em um conjunto para eliminar duplicatas, e depois de volta a uma lista
+    lista_generos = [detalhes['genero'] for isbn, detalhes in dicionario.items()]
     lista_generos_unicos = list(set(lista_generos))
-
-    # Retornando a lista de gêneros únicos
-    return lista_generos_unicos
+    return [(genero, genero) for genero in lista_generos_unicos]  # Convertendo a lista de gêneros para uma lista de tuplas
 
 # Exemplo de uso:
 # lista_generos_unicos = obter_lista_generos(dicionario_principal)

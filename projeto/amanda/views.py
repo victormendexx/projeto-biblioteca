@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import CommentForm
 from django.contrib.auth.views import LoginView, LogoutView
-from .dicio import dicionario_principal, filtrar_por_genero
+from .dicio import dicionario_principal, filtrar_por_genero, obter_lista_generos
 from .forms import CatalogoFiltroForm
 # from .models import UserProfile 
 
@@ -44,7 +44,10 @@ def sobre(request):
     return render(request, 'amanda/sobre.html')
 
 def catalogo(request):
-    form = CatalogoFiltroForm(request.POST)   
+    choices_generos = obter_lista_generos(dicionario_principal)
+
+    if request.method == "POST":        
+        form = CatalogoFiltroForm(request.POST,genero_choices=choices_generos)   
 
     if form.is_valid():
         genero = form.cleaned_data.get('genero')
@@ -54,10 +57,16 @@ def catalogo(request):
             livros_filtrados=dicionario_principal
 
 
-    context = {
-        'dicionario_principal': livros_filtrados,
-        'form': form,
-    }
+        context = {
+            'dicionario_principal': livros_filtrados,
+            'form': form,
+        }
+    else:
+        form = CatalogoFiltroForm(genero_choices=choices_generos)
+        context = {
+            'dicionario_principal': dicionario_principal,
+            'form': form,
+        }
     return render(request, 'amanda/catalogo.html', context)
 
 def detalhes_livros(request, livro_id):
