@@ -66,3 +66,19 @@ def detalhes_livros(request, livro_id):
     descricao = "Descrição: Aqui você pode adicionar uma descrição sobre a história do livro."
     return render(request, 'amanda/detalhes_livros.html', {'livro': livro, 'descricao': descricao})
 
+def search_view(request):
+    query = request.GET.get('q', '')  # Obtenha os termos de pesquisa da URL
+    results = []
+
+    # Itere sobre o dicionário de dados e encontre resultados correspondentes
+    for livro_id, livro_info in dicionario_principal.items():
+        if query.lower() in livro_info['titulo'].lower():
+            results.append(livro_info)
+
+    context = {
+        'results': results,
+        'query': query,
+    }
+
+    return render(request, 'amanda/search_results.html', context)
+

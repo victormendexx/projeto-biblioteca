@@ -9,9 +9,11 @@
     <header>
         <img src="{% static 'img/logo.png' %}" alt="Seniors Logo", class="logo">
         <div class="search">
-            <input placeholder="Pesquisar..." type="text">
-            <button type="submit">Ir</button>
-          </div>
+            <form method="GET" action="{% url 'search_view' %}">
+                <input name="q" placeholder="Pesquisar..." type="text">
+                <button type="submit">Ir</button>
+            </form>
+        </div>
         <nav>
             {% block navbar %}
                 {% include 'amanda/nav.html' %}
