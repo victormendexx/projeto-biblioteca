@@ -10,5 +10,5 @@ urlpatterns = [
     path('catalogo', catalogo, name = 'catalogo'),
     path('login/', LoginViewClass.as_view(), name='login'),
     path('logout/', LogoutViewClass.as_view(), name='logout'),
-    path('livro/<int:livro_id>/', detalhes_livros, name='detalhes_livros'),
+    path('livro<int:livro_id>/', detalhes_livros, name='detalhes_livros'),
     ]
