@@ -44,15 +44,4 @@ def sobre(request):
     return render(request, 'amanda/sobre.html')
 
 def catalogo(request):
-    return render(request, 'amanda/catalogo.html', {'livros': dicionario_principal})
-
-def detalhes_livros_pares(request, numero):
-    chave = f"livro{numero}"
-    livro = dicionario_principal.get(chave)
-
-    if livro and int(numero) % 2 == 0:
-        return render(request, 'amanda/detalhes_livros_pares.html', {'livro': livro})
-
-# def user_profile(request):
-#     user_profile = UserProfile.objects.get(user=request.user)
-#     return render(request, 'profiles/user_profile.html', {'user_profile': user_profile})
+    return render(request, 'amanda/catalogo.html', {'dicionario_principal': dicionario_principal})
