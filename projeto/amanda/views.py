@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import CommentForm, FiltroCatalogoForm
 from django.contrib.auth.views import LoginView, LogoutView
 from .dicio import dicionario_principal
+# from .models import UserProfile 
 
 from django.shortcuts import render
 from .forms import FiltroCatalogoForm  # Import your form from the appropriate module
@@ -46,35 +47,3 @@ def sobre(request):
 
 def mostrar_livros(request):
     return render(request, 'amanda/catalago.html', {'livros': dicionario_principal})
-
-
-def catalogo(request):
-    livros_filtrados = None
-
-    if request.method == "POST":
-        filtro_form = FiltroCatalogoForm(request.POST)
-        if filtro_form.is_valid():
-            genero = filtro_form.cleaned_data.get('genero')
-            ano_publicacao = filtro_form.cleaned_data.get('ano_publicacao')
-
-            # Create a base query
-            #ivros_query = Livro.objects.all()
-
-            # if genero:
-            #     livros_query = livros_query.filter(genero=genero)
-
-            # if ano_publicacao:
-            #     livros_query = livros_query.filter(ano_publicacao=ano_publicacao)
-
-            # Execute the query and get the filtered books
-            #livros_filtrados = livros_query
-
-    else:
-        filtro_form = FiltroCatalogoForm()
-
-    context = {
-        'filtro_form': filtro_form,
-        'livros': livros_filtrados
-    }
-
-    return render(request, 'amanda/catalogo.html', context)
