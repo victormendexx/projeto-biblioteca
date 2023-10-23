@@ -1,11 +1,24 @@
 {% extends "amanda/base.html" %}
 {% block content %}
+{% load custom_filters %}
 <h2>Detalhes do Livro</h2>
 <img src="{{ livro.imagem }}" alt="{{ livro.titulo }}">
 <h3>{{ livro.titulo }}</h3>
 <p>Autor: {{ livro.autor }}</p>
 <p>Gênero: {{ livro.genero }}</p>
+<p>Editora: {{ livro.editora }}</p>
 <p>Ano de Publicação: {{ livro.ano_publicacao }}</p>
 <p>Idioma: {{ livro.idioma }}</p>
 <p>Sinopse: {{ livro.sinopse }}</p>
+<p>Status: Disponível para Empréstimo</p>
+<form method="post" action="{% url 'pegar_emprestado' livro_id=livro.id %}">
+    {% csrf_token %}
+    <button type="submit">
+        {% if status_emprestimo|get_item:livro.id == "Disponível" %}
+            Pegar Livro Emprestado
+        {% else %}
+            Devolver o Livro Emprestado
+        {% endif %}
+    </button>
+</form>
 {% endblock %}
