@@ -45,20 +45,27 @@ def sobre(request):
     return render(request, 'amanda/sobre.html')
 
 def catalogo(request):
-    form = CatalogoFiltroForm(request.GET)
-    
+    if request.method == "POST":        
+        form = CatalogoFiltroForm(request.POST)   
 
-    if form.is_valid():
-        genero = form.cleaned_data.get('genero')
-        if genero:
-            livros_filtrados = filtrar_por_genero(dicionario_principal, genero)
-        else:
-            livros_filtrados=dicionario_principal
+        if form.is_valid():
+            genero = form.cleaned_data.get('genero')
+            
+            if genero:
+                livros_filtrados = filtrar_por_genero(dicionario_principal, genero)
+            else:
+                livros_filtrados=dicionario_principal
 
 
-    context = {
-        'dicionario_principal': livros_filtrados,
-        'form': form,
-    }
+        context = {
+            'dicionario_principal': livros_filtrados,
+            'form': form,
+        }
+    else:
+        form = CatalogoFiltroForm()
+        context = {
+            'dicionario_principal': dicionario_principal,
+            'form': form,
+        }
     return render(request, 'amanda/catalogo.html', context)
 
