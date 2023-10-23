@@ -70,3 +70,24 @@ dicionario_principal = {
         "idioma": "português",
     }
 }
+
+
+def filtrar_por_genero(dicionario, genero):
+    # Inicializando um dicionário vazio para armazenar os resultados
+    dicionario_filtrado = {}
+
+    # Iterando sobre cada item no dicionário fornecido
+    for isbn, detalhes in dicionario.items():
+        # Verificando se o gênero do item atual corresponde ao gênero desejado
+        if detalhes['genero'].lower() == genero.lower():
+            # Se corresponder, adicionar o item ao dicionário filtrado
+            dicionario_filtrado[isbn] = detalhes
+
+    # Retornando o dicionário filtrado
+    return dicionario_filtrado
+
+# Exemplo de uso:
+# genero_desejado = 'Romance'
+# livros_filtrados = filtrar_por_genero(dicionario_principal, genero_desejado)
+# print(livros_filtrados)
+
