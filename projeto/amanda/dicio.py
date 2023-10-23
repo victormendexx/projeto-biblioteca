@@ -1,72 +1,82 @@
 dicionario_principal = {
-    "978-85-8057-225-4": {
+    "livro1": {
         "titulo": "A culpa é das estrelas",
         "autor": "John Green",
         "genero": "Romance",
         "ano_publicacao": "2012",
         "idioma": "português",
+        "imagem" : "img/aculpaedasestrelas.jpg"
     },
-    "978-1-78110-368-5": {
+    "livro2": {
         "titulo": "Harry Potter e a Pedra Filosofal",
         "autor": "J. K. Rowling",
         "genero": "Fantasia",
         "ano_publicacao": "1997",
         "idioma": "português",
+        "imagem" : "img/harrypotter.jpg"
     },
-    "978-85-8105-152-9": {
+    "livro3": {
         "titulo": "It - A Coisa",
         "autor": "Stephen King",
         "genero": "Terror",
         "ano_publicacao": "1996",
         "idioma": "português",
+        "imagem" : "img/itacoisa.jpg"
     },
-    "978-85-8122-030-7": {
+    "livro4": {
         "titulo": "Jogos Vorazes",
         "autor": "Suzanne Collins",
         "genero": "Distopia",
         "ano_publicacao": "2008",
         "idioma": "português",
+        "imagem" : "img/jogosvorazes.jpg"
     },
-    "978-85-01-10541-7": {
+    "livro5": {
         "titulo": "A Garota no Trem",
         "autor": "Paula Hawkins",
         "genero": "Mistério",
         "ano_publicacao": "2015",
         "idioma": "português",
+        "imagem" : "img/agarotanotrem.jpg"
     },
-    "978-1-5247-6313-8": {
+    "livro6": {
         "titulo": "Becoming",
         "autor": "Michelle Obama",
         "genero": "Biografia",
         "ano_publicacao": "2018",
         "idioma": "inglês",
+        "imagem" : "img/becoming.jpg"
     },
-    "978-85-5451-368-9": {
+    "livro7": {
         "titulo": "Os Sete Maridos de Evelyn Hugo",
         "autor": "Taylor Jenkins Reid",
         "genero": "Ficção",
         "ano_publicacao": "2017",
         "idioma": "português",
+        "imagem" : "img/ossetemaridos.jpg"
     },
-    "978-0-261-10366-5": {
+    "livro8": {
         "titulo": "O Silmarillion",
         "autor": "J. R. R. Tolkien",
         "genero": "Fantasia",
         "ano_publicacao": "1997",
         "idioma": "português",
+        "imagem" : "img/silmarillion.jpg"
     },
-    "978-14-0595-531-7": {
+    "livro9": {
         "titulo": "Mil Beijos de Garoto",
         "autor": "Tillie Cole",
         "genero": "Romance",
         "ano_publicacao": "2016",
         "idioma": "português",
+        "imagem" : "img/milbeijosdegaroto.jpg"
     },
-    "978-85-510-0295-7": {
+    "livro10": {
         "titulo": "O Homem de Giz",
         "autor": "C. J. Tudo",
         "genero": "Suspense",
         "ano_publicacao": "2018",
         "idioma": "português",
+        "imagem" : "img/ohomemdegiz.jpg"
     }
 }

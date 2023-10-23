@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .forms import CommentForm
 from django.contrib.auth.views import LoginView, LogoutView
+from .dicio import dicionario_principal
+from .forms import CatalogoFiltroForm
+# from .models import UserProfile 
 
 
 class LoginViewClass(LoginView):
@@ -14,7 +17,6 @@ class LogoutViewClass(LogoutView):
         Simple Logout View Class"""
     next_page = '/'  # 'home' is the url name of your ho
 
-from .dicio import dicionario_principal
 
 def inicio(request):
     return render(request, 'amanda/inicio.html')
@@ -42,5 +44,18 @@ def avaliacoes(request):
 def sobre(request):
     return render(request, 'amanda/sobre.html')
 
-def mostrar_livros(request):
-    return render(request, 'amanda/catalago.html', {'livros': dicionario_principal})
+def catalogo(request):
+    form = CatalogoFiltroForm(request.GET)
+    
+
+    if form.is_valid():
+        genero = form.cleaned_data.get('genero')
+        if genero:
+           pass
+
+        context = {
+           'dicionario_principal': dicionario_principal,
+           'form': form,
+    }
+    return render(request, 'amanda/catalogo.html', context)
+
