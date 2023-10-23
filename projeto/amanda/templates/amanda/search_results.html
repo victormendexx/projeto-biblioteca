@@ -1,0 +1,20 @@
+{% extends "amanda/base.html" %}
+
+{% load static %}  <!-- Certifique-se de que esta linha esteja presente -->
+
+{% block content %}
+    <h1>Resultados da Pesquisa</h1>
+    <p>Você pesquisou por: {{ query }}</p>
+    <ul>
+        {% for livro in results %}
+            <li>
+                <img src="{% static livro.imagem %}" alt="{{ livro.titulo }}">
+                <h2>{{ livro.titulo }}</h2>
+                <p>Autor: {{ livro.autor }}</p>
+                <p>Gênero: {{ livro.genero }}</p>
+            </li>
+        {% empty %}
+            <p>Nenhum resultado encontrado.</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

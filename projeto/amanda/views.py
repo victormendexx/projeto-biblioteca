@@ -1,11 +1,8 @@
 from django.shortcuts import render
-from .forms import CommentForm, FiltroCatalogoForm
+from .forms import CommentForm
 from django.contrib.auth.views import LoginView, LogoutView
 from .dicio import dicionario_principal
 # from .models import UserProfile 
-
-from django.shortcuts import render
-from .forms import FiltroCatalogoForm  # Import your form from the appropriate module
 
 class LoginViewClass(LoginView):
     """ 
@@ -45,5 +42,22 @@ def avaliacoes(request):
 def sobre(request):
     return render(request, 'amanda/sobre.html')
 
-def mostrar_livros(request):
-    return render(request, 'amanda/catalago.html', {'livros': dicionario_principal})
+def catalogo(request):
+    return render(request, 'amanda/catalogo.html', {'dicionario_principal': dicionario_principal})
+
+def search_view(request):
+    query = request.GET.get('q', '')  # Obtenha os termos de pesquisa da URL
+    results = []
+
+    # Itere sobre o dicionário de dados e encontre resultados correspondentes
+    for livro_id, livro_info in dicionario_principal.items():
+        if query.lower() in livro_info['titulo'].lower():
+            results.append(livro_info)
+
+    context = {
+        'results': results,
+        'query': query,
+    }
+
+    return render(request, 'amanda/search_results.html', context)
+
