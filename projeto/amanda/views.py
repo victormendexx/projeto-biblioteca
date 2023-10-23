@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from .forms import CommentForm
 from django.contrib.auth.views import LoginView, LogoutView
 from .dicio import dicionario_principal, filtrar_por_genero, obter_lista_generos
 from .forms import CatalogoFiltroForm
@@ -20,26 +19,6 @@ class LogoutViewClass(LogoutView):
 def inicio(request):
     return render(request, 'amanda/inicio.html')
 
-comments = []
-
-def avaliacoes(request):
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            text = form.cleaned_data['text']
-            comments.append({'name': name, 'text': text})
-            form = CommentForm()
-    else:
-        form = CommentForm()
-
-    context = {
-        'comments': comments,
-        'form': form,
-    }
-
-    return render(request, 'amanda/avaliacoes.html', context)
-
 def sobre(request):
     return render(request, 'amanda/sobre.html')
 
@@ -49,12 +28,13 @@ def catalogo(request):
     if request.method == "POST":        
         form = CatalogoFiltroForm(request.POST,genero_choices=choices_generos)   
 
-    if form.is_valid():
-        genero = form.cleaned_data.get('genero')
-        if genero:
-            livros_filtrados = filtrar_por_genero(dicionario_principal, genero)
-        else:
-            livros_filtrados=dicionario_principal
+        if form.is_valid():
+            genero = form.cleaned_data.get('genero')
+
+            if genero:
+                livros_filtrados = filtrar_por_genero(dicionario_principal, genero)
+            else:
+                livros_filtrados=dicionario_principal
 
 
         context = {

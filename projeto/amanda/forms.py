@@ -7,9 +7,6 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ['name', 'text']
 
-
-
-
 class CatalogoFiltroForm(forms.Form):
     def __init__(self, *args, genero_choices=None, **kwargs):
         super().__init__(*args, **kwargs)
