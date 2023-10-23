@@ -1,5 +1,5 @@
 dicionario_principal = {
-    "livro1": {
+    1: {
         "titulo": "A culpa é das estrelas",
         "autor": "John Green",
         "genero": "Romance",
@@ -7,7 +7,7 @@ dicionario_principal = {
         "idioma": "português",
         "imagem" : "img/aculpaedasestrelas.jpg"
     },
-    "livro2": {
+    2: {
         "titulo": "Harry Potter e a Pedra Filosofal",
         "autor": "J. K. Rowling",
         "genero": "Fantasia",
@@ -15,7 +15,7 @@ dicionario_principal = {
         "idioma": "português",
         "imagem" : "img/harrypotter.jpg"
     },
-    "livro3": {
+    3: {
         "titulo": "It - A Coisa",
         "autor": "Stephen King",
         "genero": "Terror",
@@ -23,7 +23,7 @@ dicionario_principal = {
         "idioma": "português",
         "imagem" : "img/itacoisa.jpg"
     },
-    "livro4": {
+    4: {
         "titulo": "Jogos Vorazes",
         "autor": "Suzanne Collins",
         "genero": "Distopia",
@@ -31,7 +31,7 @@ dicionario_principal = {
         "idioma": "português",
         "imagem" : "img/jogosvorazes.jpg"
     },
-    "livro5": {
+    5: {
         "titulo": "A Garota no Trem",
         "autor": "Paula Hawkins",
         "genero": "Mistério",
@@ -39,7 +39,7 @@ dicionario_principal = {
         "idioma": "português",
         "imagem" : "img/agarotanotrem.jpg"
     },
-    "livro6": {
+    6: {
         "titulo": "Becoming",
         "autor": "Michelle Obama",
         "genero": "Biografia",
@@ -47,7 +47,7 @@ dicionario_principal = {
         "idioma": "inglês",
         "imagem" : "img/becoming.jpg"
     },
-    "livro7": {
+    7: {
         "titulo": "Os Sete Maridos de Evelyn Hugo",
         "autor": "Taylor Jenkins Reid",
         "genero": "Ficção",
@@ -55,7 +55,7 @@ dicionario_principal = {
         "idioma": "português",
         "imagem" : "img/ossetemaridos.jpg"
     },
-    "livro8": {
+    8: {
         "titulo": "O Silmarillion",
         "autor": "J. R. R. Tolkien",
         "genero": "Fantasia",
@@ -63,7 +63,7 @@ dicionario_principal = {
         "idioma": "português",
         "imagem" : "img/silmarillion.jpg"
     },
-    "livro9": {
+    9: {
         "titulo": "Mil Beijos de Garoto",
         "autor": "Tillie Cole",
         "genero": "Romance",
@@ -71,7 +71,7 @@ dicionario_principal = {
         "idioma": "português",
         "imagem" : "img/milbeijosdegaroto.jpg"
     },
-    "livro10": {
+    10: {
         "titulo": "O Homem de Giz",
         "autor": "C. J. Tudo",
         "genero": "Suspense",

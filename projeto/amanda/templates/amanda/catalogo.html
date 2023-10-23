@@ -23,6 +23,7 @@
                             <p class="autor">Autor: {{ livro.autor }}</p>
                             <p class="genero">Gênero: {{ livro.genero }}</p>
                             <p class="ano">Ano de Publicação: {{ livro.ano_publicacao }}</p>
+                            <a href="{% url 'detalhes_livros' livro_id %}">Saiba Mais</a>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,6 @@ from django.contrib.auth.views import LoginView, LogoutView
 from .dicio import dicionario_principal
 # from .models import UserProfile 
 
-
 class LoginViewClass(LoginView):
     """ 
         Login View Class """
@@ -45,3 +44,9 @@ def sobre(request):
 
 def catalogo(request):
     return render(request, 'amanda/catalogo.html', {'dicionario_principal': dicionario_principal})
+
+def detalhes_livros(request, livro_id):
+    chave = int(livro_id)
+    livro = dicionario_principal.get(chave)
+    descricao = "Descrição: Aqui você pode adicionar uma descrição sobre a história do livro."
+    return render(request, 'amanda/detalhes_livros.html', {'livro': livro, 'descricao': descricao})
