@@ -91,3 +91,44 @@ dicionario_principal = {
         "sinopse": "Assassinato e sinais misteriosos em uma trama para fãs de Stranger Things e Stephen KingEm 1986, Eddie e os amigos passam a maior parte dos dias andando de bicicleta pela pacata vizinhança em busca de aventuras. Os desenhos a giz são seu código secreto: homenzinhos rabiscados no asfalto; mensagens que só eles entendem."
     }
 }
+
+
+def filtrar_por_genero(dicionario, genero):
+    # Inicializando um dicionário vazio para armazenar os resultados
+    dicionario_filtrado = {}
+
+    # Iterando sobre cada item no dicionário fornecido
+    for isbn, detalhes in dicionario.items():
+        # Verificando se o gênero do item atual corresponde ao gênero desejado
+        if detalhes['genero'].lower() == genero.lower():
+            # Se corresponder, adicionar o item ao dicionário filtrado
+            dicionario_filtrado[isbn] = detalhes
+
+    # Retornando o dicionário filtrado
+    return dicionario_filtrado
+
+# Exemplo de uso:
+# genero_desejado = 'Romance'
+# livros_filtrados = filtrar_por_genero(dicionario_principal, genero_desejado)
+# print(livros_filtrados)
+
+
+
+def obter_lista_generos(dicionario):
+    # Inicializando uma lista vazia para coletar os gêneros
+    lista_generos = []
+
+    # Iterando sobre cada item no dicionário fornecido
+    for isbn, detalhes in dicionario.items():
+        # Adicionando o gênero do item atual à lista
+        lista_generos.append(detalhes['genero'])
+
+    # Convertendo a lista em um conjunto para eliminar duplicatas, e depois de volta a uma lista
+    lista_generos_unicos = list(set(lista_generos))
+
+    # Retornando a lista de gêneros únicos
+    return lista_generos_unicos
+
+# Exemplo de uso:
+# lista_generos_unicos = obter_lista_generos(dicionario_principal)
+# print(lista_generos_unicos)

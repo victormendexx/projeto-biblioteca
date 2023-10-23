@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from .forms import CommentForm
 from django.contrib.auth.views import LoginView, LogoutView
-from .dicio import dicionario_principal
+from .dicio import dicionario_principal, filtrar_por_genero
+from .forms import CatalogoFiltroForm
 # from .models import UserProfile 
 
 class LoginViewClass(LoginView):
@@ -43,10 +44,25 @@ def sobre(request):
     return render(request, 'amanda/sobre.html')
 
 def catalogo(request):
-    return render(request, 'amanda/catalogo.html', {'dicionario_principal': dicionario_principal})
+    form = CatalogoFiltroForm(request.POST)   
+
+    if form.is_valid():
+        genero = form.cleaned_data.get('genero')
+        if genero:
+            livros_filtrados = filtrar_por_genero(dicionario_principal, genero)
+        else:
+            livros_filtrados=dicionario_principal
+
+
+    context = {
+        'dicionario_principal': livros_filtrados,
+        'form': form,
+    }
+    return render(request, 'amanda/catalogo.html', context)
 
 def detalhes_livros(request, livro_id):
     chave = int(livro_id)
     livro = dicionario_principal.get(chave)
     descricao = "Descrição: Aqui você pode adicionar uma descrição sobre a história do livro."
     return render(request, 'amanda/detalhes_livros.html', {'livro': livro, 'descricao': descricao})
+
