@@ -2,6 +2,7 @@ body, h1, h2, h3, p, ul, li, a, img, div, form, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 /* Estilize o corpo da página */
@@ -35,16 +36,18 @@ main {
 /* Estilize o cabeçalho para controle de posicionamento */
 header {
     display: flex;
-    justify-content: auto;
+    justify-content: space-between; /* Espaço entre os elementos, colocando a logo à esquerda e o conteúdo à direita */
     align-items: center;
     padding: 6px 20px;
+    max-width: 100%;
+    background-color: #222;
 }
 
 /* Estilize a barra de navegação */
 nav {
-    position: relative;
-    top: 5px;
-    left: 166px;
+    position: absolute;
+    justify-content: center;
+    left: 235px;
 }
 
 /* Estilize os links na barra de navegação */
@@ -61,11 +64,9 @@ nav a:hover {
 }
 
 .search {
-    display: inline-block;
+    display: flex;
     position: relative;
-    left: 1480px;
-    top: 5px;
-
+    justify-content: flex-end; /* Alinhe a barra de pesquisa no canto superior direito */
 }
   
 .search input[type="text"] {
@@ -199,22 +200,22 @@ main.cards-container {
     height: 254px;
     perspective: 1000px;
     font-family: sans-serif;
-  }
+}
   
-  .flip-card-inner {
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
+}
   
-  .flip-card:hover .flip-card-inner {
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  }
+}
   
-  .flip-card-front {
+.flip-card-front {
     box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
     position: absolute;
     display: flex;
@@ -225,9 +226,9 @@ main.cards-container {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 1rem;
-  }
+}
 
-  .flip-card-back {
+.flip-card-back {
     box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
     position: absolute;
     display: flex;
@@ -239,16 +240,16 @@ main.cards-container {
     backface-visibility: hidden;
     border: 1px solid #00C2CB;
     border-radius: 1rem;
-  }
+}
 
-  .flip-card-front {
+.flip-card-front {
     color: #ffffff;
-  }
+}
   
-  .flip-card-back {
+.flip-card-back {
     color: white;
     transform: rotateY(180deg);
-  }
+}
 
 
 /* Estilize o rodapé */
@@ -286,16 +287,15 @@ footer {
 
 .card1 {
     position: relative;
-    top: 100px;
     width: 300px;
     padding: 5.8rem 4.4rem;
     text-align: center;
     background: #1a1a1a;
     border-radius: 20px;
-   }
+}
    
    /*Inputs*/
-   .field {
+.field {
     margin-top: .5rem;
     display: flex;
     align-items: center;
@@ -304,32 +304,32 @@ footer {
     background-color: #1f2029;
     border-radius: 4px;
     padding: .5em 1em;
-   }
+}
    
-   .input-icon {
+.input-icon {
     height: 1em;
     width: 1em;
     fill: #00C2CB;
-   }
+}
    
-   .input-field {
+.input-field {
     background: none;
     border: none;
     outline: none;
     width: 100%;
     color: #00C2CB  ;
-   }
+}
    
    /*Text*/
-   .title {
+.title {
     margin-bottom: 1rem;
     font-size: 1.5em;
     font-weight: 500;
     color: #fff;
-   }
+}
    
    /*Buttons*/
-   .btn {
+.btn {
     margin: 1rem;
     border: none;
     border-radius: 4px;
@@ -342,17 +342,17 @@ footer {
     box-shadow: 0 0 10px 0 #00C2CB;
     transition: all .3s ease-in-out;
     cursor: pointer;
-   }
+}
    
-   .btn-link {
+.btn-link {
     color: #f5f5f5;
     display: block;
     font-size: .75em;
     transition: color .3s ease-out;
-   }
+}
    
    /*Hover & focus*/
-   .field input:focus::placeholder {
+.field input:focus::placeholder {
     opacity: 0;
     transition: opacity .3s;
-   }
+}

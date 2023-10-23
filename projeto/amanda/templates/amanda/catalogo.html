@@ -10,24 +10,26 @@
     <div id="catalogo">
         <div class="livros-container">
             {% for livro_id, livro in dicionario_principal.items %}
-            <div class="livro">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <div class="livro-image">
-                                <img src="{% static livro.imagem %}" alt="{{ livro.titulo }}">
+            <a href="{% url 'detalhes_livros' livro_id %}" class="livro-link">
+                <div class="livro">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="livro-image">
+                                    <img src="{% static livro.imagem %}" alt="{{ livro.titulo }}">
+                                </div>
                             </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h2>{{ livro.titulo }}</h2>
-                            <p class="autor">Autor: {{ livro.autor }}</p>
-                            <p class="genero">Gênero: {{ livro.genero }}</p>
-                            <p class="ano">Ano de Publicação: {{ livro.ano_publicacao }}</p>
-                            <a href="{% url 'detalhes_livros' livro_id %}">Saiba Mais</a>
+                            <div class="flip-card-back">
+                                <h2>{{ livro.titulo }}</h2>
+                                <p class="autor">Autor: {{ livro.autor }}</p>
+                                <p class="genero">Gênero: {{ livro.genero }}</p>
+                                <p class="ano">Ano de Publicação: {{ livro.ano_publicacao }}</p>
+                                <p class="saiba-mais">Clique para saber mais</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
             {% endfor %}
         </div>
     </div>

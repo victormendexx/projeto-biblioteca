@@ -1,10 +1,15 @@
 {% extends "amanda/base.html" %}
+{% load static %}
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 <h2>Detalhes do Livro</h2>
-<img src="{{ livro.imagem }}" alt="{{ livro.titulo }}">
+<div class="livro-image">
+    <img src="{% static livro.imagem %}" alt="{{ livro.titulo }}">
+</div>
 <h3>{{ livro.titulo }}</h3>
 <p>Autor: {{ livro.autor }}</p>
-<p>Gênero: {{ livro.genero }}</p>
+<p>Gênero: {{ livro.genero }}</p>   
 <p>Ano de Publicação: {{ livro.ano_publicacao }}</p>
 <p>Idioma: {{ livro.idioma }}</p>
 <p>Sinopse: {{ livro.sinopse }}</p>
