@@ -1,15 +1,46 @@
 status_emprestimo = {
-    "livro1": "Disponível",
-    "livro2": "Disponível",
-    "livro3": "Disponível",
-    "livro4": "Disponível",
-    "livro5": "Disponível",
-    "livro6": "Disponível",
-    "livro7": "Disponível",
-    "livro8": "Disponível",
-    "livro9": "Disponível",
-    "livro10": "Disponível",
+    "livro1": {
+        "status": "Disponível",
+        "pdf_disponivel": "pdf/livro1.pdf"
+    },
+    "livro2": {
+        "status": "Disponível",
+        "pdf_disponivel": "pdf/livro2.pdf"
+    },
+    "livro3": {
+        "status": "Disponível",
+        "pdf_disponivel": "pdf/livro3.pdf"
+    },
+    "livro4": {
+        "status": "Disponível",
+        "pdf_disponivel": "pdf/livro4.pdf"
+    },
+    "livro5": {
+        "status": "Disponível",
+        "pdf_disponivel": "pdf/livro5.pdf"
+    },
+    "livro6": {
+        "status": "Disponível",
+        "pdf_disponivel": "pdf/livro6.pdf"
+    },
+    "livro7": {
+        "status": "Disponível",
+        "pdf_disponivel": "pdf/livro7.pdf"
+    },
+    "livro8": {
+        "status": "Disponível",
+        "pdf_disponivel": "pdf/livro8.pdf"
+    },
+    "livro9": {
+        "status": "Disponível",
+        "pdf_disponivel": "pdf/livro9.pdf"
+    },
+    "livro10": {
+        "status": "Disponível",
+        "pdf_disponivel": "pdf/livro10.pdf"
+    }
 }
+
 
 dicionario_principal = {
     1: {

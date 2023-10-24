@@ -10,15 +10,14 @@
 <p>Ano de Publicação: {{ livro.ano_publicacao }}</p>
 <p>Idioma: {{ livro.idioma }}</p>
 <p>Sinopse: {{ livro.sinopse }}</p>
-<p>Status: Disponível para Empréstimo</p>
-<form method="post" action="{% url 'pegar_emprestado' livro_id=livro.id %}">
+<p>Status: {{ status_emprestimo.status }}</p>
+<form method="post" action="{% url 'pegar_emprestado' livro_id=livro_id %}">
     {% csrf_token %}
-    <button type="submit">
-        {% if status_emprestimo|get_item:livro.id == "Disponível" %}
-            Pegar Livro Emprestado
+        {% if status_emprestimo.status == "Disponível" %}
+            <button type="submit">Pegar Livro Emrpestado</button>
         {% else %}
-            Devolver o Livro Emprestado
+            <button type="submit" name="devolver" value="true">Devolver o Livro Emprestado</button>
+            <input type="file" name="pdf_upload">
         {% endif %}
-    </button>
 </form>
 {% endblock %}

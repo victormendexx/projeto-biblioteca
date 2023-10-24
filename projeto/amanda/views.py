@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from .forms import CommentForm
 from django.contrib.auth.views import LoginView, LogoutView
 from .dicio import dicionario_principal, status_emprestimo
+from django.urls import reverse
+import os
 # from .models import UserProfile 
 
 class LoginViewClass(LoginView):
@@ -47,19 +49,31 @@ def catalogo(request):
     return render(request, 'amanda/catalogo.html', {'dicionario_principal': dicionario_principal})
 
 def detalhes_livros(request, livro_id):
-    chave = int(livro_id)
-    livro = dicionario_principal.get(chave)
-    descricao = "Descrição: Aqui você pode adicionar uma descrição sobre a história do livro."
-    return render(request, 'amanda/detalhes_livros.html', {'livro': livro, 'descricao': descricao})
+    livro = dicionario_principal.get(livro_id)
 
-for livro_id in dicionario_principal:
-    status_emprestimo[livro_id] = "Disponível"
+    if not livro:
+        return HttpResponse("Livro não encontrado")
+
+    return render(request, 'amanda/detalhes_livros.html', {'livro': livro, 'livro_id': livro_id})
 
 def pegar_emprestado(request, livro_id):
-    if status_emprestimo.get(livro_id) == "Disponível":
-        status_emprestimo[livro_id] = "Indisponível"
-        acao = "pegou"
-    else:
-        status_emprestimo[livro_id] = "Disponível"
-        acao = "devolveu"    
-    return HttpResponse(f'Voce {acao} o livro emprestado com sucesso.')
+    status_info = status_emprestimo.get(livro_id)
+
+    pdf_path = status_info.get("pdf_disponivel", "")
+    response = HttpResponse(pdf_path, content_type='application/pdf')
+    response['Content-Disposition'] = f'attachment; filename="{pdf_path}"'
+
+    status_info["status"] = "Indisponível"
+
+    return response
+
+def devolver_emprestado(request, livro_id):
+    if request.method == 'POST':
+        uploaded_file = request.FILES['pdf_upload']
+        status_info = status_emprestimo.get(livro_id)
+
+        if status_info['status'] and uploaded_file.name == os.path.basename(status_info.get("pdf_disponivel", "")):
+            status_info['status'] = "Disponível"
+            return HttpResponse("Livro devolvido com sucesso")
+    
+    return HttpResponseRedirect(reverse('detalhes_livros', kwargs={'livro_id': livro_id}))
