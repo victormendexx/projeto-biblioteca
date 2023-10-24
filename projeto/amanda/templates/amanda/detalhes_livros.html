@@ -1,6 +1,5 @@
 {% extends "amanda/base.html" %}
 {% block content %}
-{% load custom_filters %}
 <h2>Detalhes do Livro</h2>
 <img src="{{ livro.imagem }}" alt="{{ livro.titulo }}">
 <h3>{{ livro.titulo }}</h3>
@@ -10,14 +9,25 @@
 <p>Ano de Publicação: {{ livro.ano_publicacao }}</p>
 <p>Idioma: {{ livro.idioma }}</p>
 <p>Sinopse: {{ livro.sinopse }}</p>
-<p>Status: {{ status_emprestimo.status }}</p>
+<p>Status: <span id="status">{{ status_emprestimo }}</span></p>
 <form method="post" action="{% url 'pegar_emprestado' livro_id=livro_id %}">
     {% csrf_token %}
-        {% if status_emprestimo.status == "Disponível" %}
-            <button type="submit">Pegar Livro Emrpestado</button>
-        {% else %}
-            <button type="submit" name="devolver" value="true">Devolver o Livro Emprestado</button>
-            <input type="file" name="pdf_upload">
-        {% endif %}
+    <button type="submit" id="emprestimo-button" {% if status_emprestimo.status != "Disponível" %} style="display: none" {% endif %}>Pegar Livro Emprestado</button>
+    <button type="submit" id="devolver-button" name="devolver" value="true" {% if status_emprestimo.status == "Disponível" %} style="display: none" {% endif %}>Devolver o Livro Emprestado</button>
+    <input type="file" name="pdf_upload" {% if status_emprestimo.status != "Disponível" %} style="display: none" {% endif %}>
 </form>
+<script>
+    const status = document.getElementById('status').textContent;
+    const emprestimoButton = document.getElementById('emprestimo-button');
+    const devolverButton = document.getElementById('devolver-button');
+    const fileInput = document.querySelector('input[name="pdf_upload"]');
+
+    if (status === 'Disponível') {
+        emprestimoButton.style.display = 'inline-block';
+    } else {
+        emprestimoButton.style.display = 'none';
+        devolverButton.style.display = 'inline-block';
+        fileInput.style.display = 'inline-block';
+    }
+</script>
 {% endblock %}
