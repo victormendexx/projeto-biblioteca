@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from .forms import CommentForm
 from django.contrib.auth.views import LoginView, LogoutView
-from .dicio import dicionario_principal, status_emprestimo
+from .dicio import dicionario_principal, filtrar_por_genero, obter_lista_generos, status_emprestimo
+from .forms import CatalogoFiltroForm
 # from .models import UserProfile 
 
 class LoginViewClass(LoginView):
@@ -20,37 +19,54 @@ class LogoutViewClass(LogoutView):
 def inicio(request):
     return render(request, 'amanda/inicio.html')
 
-comments = []
-
-def avaliacoes(request):
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            text = form.cleaned_data['text']
-            comments.append({'name': name, 'text': text})
-            form = CommentForm()
-    else:
-        form = CommentForm()
-
-    context = {
-        'comments': comments,
-        'form': form,
-    }
-
-    return render(request, 'amanda/avaliacoes.html', context)
-
 def sobre(request):
     return render(request, 'amanda/sobre.html')
 
 def catalogo(request):
-    return render(request, 'amanda/catalogo.html', {'dicionario_principal': dicionario_principal})
+    choices_generos = obter_lista_generos(dicionario_principal)
+
+    if request.method == "POST":        
+        form = CatalogoFiltroForm(request.POST,genero_choices=choices_generos)   
+
+        if form.is_valid():
+            genero = form.cleaned_data.get('genero')
+
+            if genero:
+                livros_filtrados = filtrar_por_genero(dicionario_principal, genero)
+            else:
+                livros_filtrados=dicionario_principal
+
+
+        context = {
+            'dicionario_principal': livros_filtrados,
+            'form': form,
+        }
+    else:
+        form = CatalogoFiltroForm(genero_choices=choices_generos)
+        context = {
+            'dicionario_principal': dicionario_principal,
+            'form': form,
+        }
+    return render(request, 'amanda/catalogo.html', context)
 
 def detalhes_livros(request, livro_id):
     livro = dicionario_principal.get(livro_id)
-    status_info = status_emprestimo.get(f"livro{livro_id}", {})
+    status_info = status_emprestimo.get(f"livro{livro_id}")
+    
+    return render(request, 'amanda/detalhes_livros.html', {'livro': livro, 'status_info': status_info})
 
-    if not livro:
-        return HttpResponse("Livro não encontrado")
+def search_view(request):
+    query = request.GET.get('q', '')  # Obtenha os termos de pesquisa da URL
+    results = []
 
-    return render(request, 'amanda/detalhes_livros.html', {'livro': livro, 'livro_id': livro_id, 'status_info': status_info})
+    # Itere sobre o dicionário de dados e encontre resultados correspondentes
+    for livro_id, livro_info in dicionario_principal.items():
+        if query.lower() in livro_info['titulo'].lower():
+            results.append(livro_info)
+
+    context = {
+        'results': results,
+        'query': query,
+    }
+
+    return render(request, 'amanda/search_results.html', context)
