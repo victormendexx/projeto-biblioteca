@@ -357,3 +357,10 @@ footer {
     opacity: 0;
     transition: opacity .3s;
 }
+
+.infolivros {
+    position: relative;
+    justify-content: space-between;
+    display: block;
+    margin: auto;
+}

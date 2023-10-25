@@ -3,14 +3,20 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-<h2>Detalhes do Livro</h2>
 <div class="livro-image">
     <img src="{% static livro.imagem %}" alt="{{ livro.titulo }}">
 </div>
-<h3>{{ livro.titulo }}</h3>
-<p>Autor: {{ livro.autor }}</p>
-<p>Gênero: {{ livro.genero }}</p>   
-<p>Ano de Publicação: {{ livro.ano_publicacao }}</p>
-<p>Idioma: {{ livro.idioma }}</p>
-<p>Sinopse: {{ livro.sinopse }}</p>
+<body>
+    <div class="infolivros" >
+        <div class="titulolivros" >
+            <h3>{{ livro.titulo }}</h3>
+        </div>
+        <p>Autor: {{ livro.autor }}</p>
+        <p>Gênero: {{ livro.genero }}</p>   
+        <p>Ano de Publicação: {{ livro.ano_publicacao }}</p>
+        <p>Idioma: {{ livro.idioma }}</p>
+        <p>Sinopse: {{ livro.sinopse }}</p>
+        <a href="{% static livro.pdf %}" target="_blank">Baixar PDF</a>
+    </div>
+</body>
 {% endblock %}

@@ -88,6 +88,7 @@ dicionario_principal = {
         "ano_publicacao": "2018",
         "idioma": "português",
         "imagem" : "img/ohomemdegiz.jpg",
+        "pdf" : "pdf/ohomemdegiz.pdf",
         "sinopse": "Assassinato e sinais misteriosos em uma trama para fãs de Stranger Things e Stephen KingEm 1986, Eddie e os amigos passam a maior parte dos dias andando de bicicleta pela pacata vizinhança em busca de aventuras. Os desenhos a giz são seu código secreto: homenzinhos rabiscados no asfalto; mensagens que só eles entendem."
     }
 }
