@@ -364,3 +364,16 @@ footer {
     display: block;
     margin: auto;
 }
+
+.livro-container {
+    display: flex;
+}
+
+.livro-image {
+    flex: 1;
+    margin-right: 20px; /* Espaço entre a imagem e as informações */
+}
+
+.livro-info {
+    flex: 2; /* Ajuste conforme necessário para o tamanho desejado */
+}

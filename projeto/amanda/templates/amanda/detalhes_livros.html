@@ -3,20 +3,20 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-<div class="livro-image">
-    <img src="{% static livro.imagem %}" alt="{{ livro.titulo }}">
-</div>
-<body>
-    <div class="infolivros" >
-        <div class="titulolivros" >
+<div class="livro-container">
+    <div class="livro-image">
+        <img src="{% static livro.imagem %}" alt="{{ livro.titulo }}">
+    </div>
+    <div class="livro-info">
+        <div class="titulolivros">
             <h3>{{ livro.titulo }}</h3>
         </div>
-        <p>Autor: {{ livro.autor }}</p>
-        <p>Gênero: {{ livro.genero }}</p>   
-        <p>Ano de Publicação: {{ livro.ano_publicacao }}</p>
-        <p>Idioma: {{ livro.idioma }}</p>
-        <p>Sinopse: {{ livro.sinopse }}</p>
-        <a href="{% static livro.pdf %}" target="_blank">Baixar PDF</a>
+        <p>Autor: {{ livro.autor }}</p><br>
+        <p>Gênero: {{ livro.genero }}</p><br>
+        <p>Ano de Publicação: {{ livro.ano_publicacao }}</p><br>
+        <p>Idioma: {{ livro.idioma }}</p><br>
+        <p>Sinopse: {{ livro.sinopse }}</p><br>
+        <a href="{% static livro.pdf %}" download>Baixar PDF</a>
     </div>
-</body>
+</div>
 {% endblock %}
