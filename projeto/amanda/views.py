@@ -48,9 +48,9 @@ def catalogo(request):
 
 def detalhes_livros(request, livro_id):
     livro = dicionario_principal.get(livro_id)
-    status = status_emprestimo.get(f"livro{livro_id}", {}).get('status', 'Indisponível')
+    status_info = status_emprestimo.get(f"livro{livro_id}", {})
 
     if not livro:
         return HttpResponse("Livro não encontrado")
 
-    return render(request, 'amanda/detalhes_livros.html', {'livro': livro, 'status_emprestimo': status, 'livro_id': livro_id})
+    return render(request, 'amanda/detalhes_livros.html', {'livro': livro, 'livro_id': livro_id, 'status_info': status_info})

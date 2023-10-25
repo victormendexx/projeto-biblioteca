@@ -1,5 +1,6 @@
 {% extends "amanda/base.html" %}
 {% block content %}
+{% load static %}
 <h2>Detalhes do Livro</h2>
 <img src="{{ livro.imagem }}" alt="{{ livro.titulo }}">
 <h3>{{ livro.titulo }}</h3>
@@ -9,5 +10,8 @@
 <p>Ano de Publicação: {{ livro.ano_publicacao }}</p>
 <p>Idioma: {{ livro.idioma }}</p>
 <p>Sinopse: {{ livro.sinopse }}</p>
-<p>Status: <span id="status">{{ status_emprestimo }}</span></p>
+<p>Status: <span id="status">{{ status_info.status }}</span></p>
+<form method="get" action="{% static status_info.pdf_disponivel%}" >
+    <button type="submit">Pegar livro emprestado</button>
+</form>
 {% endblock %}
