@@ -4,10 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <img src="{% static 'img/logo.png' %}" alt="Logo Seniors" class="logo">
 </head>
 <body>
     <header>
+        <img src="{% static 'img/logo.png' %}" alt="Seniors Logo", class="logo">
+        <div class="search">
+            <form method="GET" action="{% url 'search_view' %}">
+                <input name="q" placeholder="Pesquisar..." type="text">
+                <button type="submit">Ir</button>
+            </form>
+        </div>
         <nav>
             {% block navbar %}
                 {% include 'amanda/nav.html' %}
@@ -19,7 +25,6 @@
         <html>
         <main>
                 {% block content %}{% endblock %}
-            </div>
         </main>
         </body>
         </html>
