@@ -1,43 +1,43 @@
 status_emprestimo = {
     "livro1": {
         "status": "Disponível",
-        "pdf_disponivel": "pdf/livro1.pdf"
+        "pdf_disponivel": "pdf/a_culpa_e_das_estrelas.pdf"
     },
     "livro2": {
         "status": "Disponível",
-        "pdf_disponivel": "pdf/livro2.pdf"
+        "pdf_disponivel": "pdf/harry_potter_e_a_pedra_filosofal.pdf"
     },
     "livro3": {
         "status": "Disponível",
-        "pdf_disponivel": "pdf/livro3.pdf"
+        "pdf_disponivel": "pdf/it _- _a_coisa.pdf"
     },
     "livro4": {
         "status": "Disponível",
-        "pdf_disponivel": "pdf/livro4.pdf"
+        "pdf_disponivel": "pdf/jogos_vorazes.pdf"
     },
     "livro5": {
         "status": "Disponível",
-        "pdf_disponivel": "pdf/livro5.pdf"
+        "pdf_disponivel": "pdf/a_garota_no_trem.pdf"
     },
     "livro6": {
         "status": "Disponível",
-        "pdf_disponivel": "pdf/livro6.pdf"
+        "pdf_disponivel": "pdf/becoming.pdf"
     },
     "livro7": {
         "status": "Disponível",
-        "pdf_disponivel": "pdf/livro7.pdf"
+        "pdf_disponivel": "pdf/os_sete_maridos_de_evelyn_hugo.pdf"
     },
     "livro8": {
         "status": "Disponível",
-        "pdf_disponivel": "pdf/livro8.pdf"
+        "pdf_disponivel": "pdf/o_silmarillion.pdf"
     },
     "livro9": {
         "status": "Disponível",
-        "pdf_disponivel": "pdf/livro9.pdf"
+        "pdf_disponivel": "pdf/mil_beijos_de_garoto.pdf"
     },
     "livro10": {
         "status": "Disponível",
-        "pdf_disponivel": "pdf/livro10.pdf"
+        "pdf_disponivel": "pdf/o_homem_de_giz.pdf"
     }
 }
 
