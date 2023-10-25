@@ -96,6 +96,7 @@ nav a:hover {
 }
 
 .banner {
+    max-width: 93%;
     display: block;
     margin: auto;
     position: relative;
