@@ -75,6 +75,16 @@ Lembre-se de que, para implementar esta aplicação, você precisará do framewo
 ### O que está nos impedindo?
    
 ---------------------------------------------------------------------------------------------------------------------------
+### - Daily 25/10/2023:
+### O que fizemos ontem?
+   - Fizemos a barra de pesquisa ser funcional, adicionamos um filtro ao catálogo e fizemos as páginas dos livros.
+
+### O que faremos hoje?
+   - Colocaremos css nas páginas dos livros, adicionaremos a função de pedir empréstimo e colocaremos os pdfs dos livros nas páginas dos respectivos.
+
+### O que está nos impedindo?
+   
+---------------------------------------------------------------------------------------------------------------------------
 ### Integrantes da equipe:
    - Ryan W.
    - Isabela R.

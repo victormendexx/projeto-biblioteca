@@ -96,6 +96,7 @@ nav a:hover {
 }
 
 .banner {
+    max-width: 93%;
     display: block;
     margin: auto;
     position: relative;
@@ -355,4 +356,11 @@ footer {
 .field input:focus::placeholder {
     opacity: 0;
     transition: opacity .3s;
+}
+
+.infolivros {
+    position: relative;
+    justify-content: space-between;
+    display: block;
+    margin: auto;
 }
