@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.views import LoginView, LogoutView
 from .dicio import dicionario_principal, filtrar_por_genero, obter_lista_generos
 from .forms import CatalogoFiltroForm
+from django.shortcuts import render
 # from .models import UserProfile 
 
 class LoginViewClass(LoginView):
@@ -70,4 +71,3 @@ def search_view(request):
     }
 
     return render(request, 'amanda/search_results.html', context)
-
