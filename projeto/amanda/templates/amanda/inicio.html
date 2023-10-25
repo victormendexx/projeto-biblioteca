@@ -1,0 +1,135 @@
+{% extends "amanda/base.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <img src="{% static 'img/banner.jpg' %}" alt="banner" class="banner">
+</head>
+<body>
+    <h2>DESTAQUES DA SEMANA</h2>
+    <main class="cards-container">
+        <div class="card">
+            <a href="{% url 'detalhes_livros' 8 %}"> <!-- Link para detalhes do livro 1 -->
+                <span>
+                    <img src="{% static 'img/silmarillion.jpg' %}" alt="Imagem 1">
+                </span>
+            </a>
+            <div class="content">
+            </div>
+        </div>
+        <div class="card">
+            <a href="{% url 'detalhes_livros' 5 %}"> <!-- Link para detalhes do livro 5 -->
+                <span>
+                    <img src="{% static 'img/agarotanotrem.jpg' %}" alt="Imagem 2">
+                </span>
+            </a>
+            <div class="content">
+            </div>
+        </div>
+        <div class="card">
+            <a href="{% url 'detalhes_livros' 1 %}"> <!-- Link para detalhes do livro 3 -->
+                <span>
+                    <img src="{% static 'img/aculpaedasestrelas.jpg' %}" alt="Imagem 3">
+                </span>
+            </a>
+            <div class="content">
+            </div>
+        </div>
+        <div class="card">
+            <a href="{% url 'detalhes_livros' 6 %}"> <!-- Link para detalhes do livro 6 -->
+                <span>
+                    <img src="{% static 'img/becoming.jpg' %}" alt="Imagem 4">
+                </span>
+            </a>
+            <div class="content">
+            </div>
+        </div>
+        <div class="card">
+            <a href="{% url 'detalhes_livros' 10 %}"> <!-- Link para detalhes do livro 10 -->
+                <span>
+                    <img src="{% static 'img/ohomemdegiz.jpg' %}" alt="Imagem 5">
+                </span>
+            </a>
+            <div class="content">
+            </div>
+        </div>
+    </main>
+
+    <h2>SUSPENSE</h2>
+    <main class="cards-container">
+        <div class="card">
+            <a href="{% url 'detalhes_livros' 3 %}"> <!-- Link para detalhes do livro 4 (suspense) -->
+                <span>
+                    <img src="{% static 'img/itacoisa.jpg' %}" alt="Imagem 1">
+                </span>
+            </a>
+            <div class="content">
+            </div>
+        </div>
+        <div class="card">
+            <a href="{% url 'detalhes_livros' 4 %}"> <!-- Link para detalhes do livro 7 (suspense) -->
+                <span>
+                    <img src="{% static 'img/jogosvorazes.jpg' %}" alt="Imagem 2">
+                </span>
+            </a>
+            <div class="content">
+            </div>
+        </div>
+        <div class="card">
+            <a href="{% url 'detalhes_livros' 5 %}"> <!-- Link para detalhes do livro 7 (suspense) -->
+                <span>
+                    <img src="{% static 'img/agarotanotrem.jpg' %}" alt="Imagem 3">
+                </span>
+            </a>
+            <div class="content">
+            </div>
+        </div>
+        <div class="card">
+            <a href="{% url 'detalhes_livros' 10 %}"> <!-- Link para detalhes do livro 7 (suspense) -->
+                <span>
+                    <img src="{% static 'img/ohomemdegiz.jpg' %}" alt="Imagem 4">
+                </span>
+            </a>
+            <div class="content">
+            </div>
+        </div>
+    </main>
+
+    <h2>ROMANCE</h2>
+    <main class="cards-container">
+        <div class="card">
+            <a href="{% url 'detalhes_livros' 1 %}"> <!-- Link para detalhes do livro 1 (romance) -->
+                <span>
+                    <img src="{% static 'img/aculpaedasestrelas.jpg' %}" alt="Imagem 1">
+                </span>
+            </a>
+            <div class="content">
+            </div>
+        </div>
+        <div class="card">
+            <a href="{% url 'detalhes_livros' 9 %}"> <!-- Link para detalhes do livro 9 (romance) -->
+                <span>
+                    <img src="{% static 'img/milbeijosdegaroto.jpg' %}" alt="Imagem 2">
+                </span>
+            </a>
+            <div class="content">
+            </div>
+        </div>
+        <div class="card">
+            <a href="{% url 'detalhes_livros' 7 %}"> <!-- Link para detalhes do livro 9 (romance) -->
+                <span>
+                    <img src="{% static 'img/ossetemaridos.jpg' %}" alt="Imagem 3">
+                </span>
+            </a>
+            <div class="content">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+{% endblock %}

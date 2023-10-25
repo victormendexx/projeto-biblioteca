@@ -1,0 +1,13 @@
+<nav>
+    <ul style="list-style: none; display: flex; padding: 0;">
+        <li style="margin-right: 20px;"><a href="/">Início</a></li>
+        <li style="margin-right: 20px;"><a href="/catalogo">Catálogo</a></li>
+        <li style="margin-right: 20px;"><a href="/sobre">Sobre</a></li>
+        <li style="margin-right: 20px;"><a href="{% url 'register' %}">Registrar</a></li>
+        {% if user.is_authenticated %}
+           <li><a href="{% url 'logout' %}" class="nav-link">Logout</a></li> 
+        {% else %}               
+            <li><a href="{% url 'login'%}" class="nav-link">Login</a></li> 
+        {% endif %}
+    </ul>
+</nav>
