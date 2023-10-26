@@ -38,7 +38,7 @@ publicacoes = [
 ```
 ### 2. Visualização de Livros:
    - Implementar uma página que liste todos os livros disponíveis na biblioteca virtual, mostrando suas informações básicas.
-   - Permitir que os usuários possam filtrar os livros por título, autor ou status.
+   - Permitir que os usuários possam filtrar os livros por título.
 ### 3. Empréstimo de Livros:
    - Implementar uma funcionalidade que permita aos usuários emprestar um livro. Ao emprestar um livro, o status do livro deve mudar para "emprestado".
 ```python
@@ -62,9 +62,6 @@ livro_emprestado = {
 ### - Sistema de Contas de Usuário (Sem persistência de dados):
    - Criar um sistema simples de contas de usuário onde os usuários possam fazer login com um nome de usuário.
    - Rastrear quais livros estão emprestados para cada usuário.
-### - Histórico de Empréstimos:
-   - Implementar uma funcionalidade que permita aos usuários visualizar um histórico de todos os livros que eles emprestaram e devolveram.
-Lembre-se de que, para implementar esta aplicação, você precisará do framework Django e deve seguir as melhores práticas de desenvolvimento web para garantir a segurança e a eficiência da aplicação. Boa sorte!
 ---------------------------------------------------------------------------------------------------------------------------
 ### - Daily 11/10/2023:
 ### O que fizemos ontem?
