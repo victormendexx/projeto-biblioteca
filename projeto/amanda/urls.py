@@ -1,6 +1,6 @@
 from django.urls import path
 from amanda.views import inicio, sobre, catalogo, detalhes_livros
-from registration import views as registration_views
+from registro import views as registration_views
 from amanda.views import LoginViewClass, LogoutViewClass
 from . import views
 

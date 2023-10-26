@@ -7,11 +7,10 @@ def register(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data['username']
-            email = form.cleaned_data['email']
             password = form.cleaned_data['password']
 
             # Create a new user
-            user = User.objects.create_user(username=username, email=email, password=password)
+            user = User.objects.create_user(username=username, password=password)
             user.save()
 
             # You can also log the user in at this point if desired
