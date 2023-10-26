@@ -14,5 +14,4 @@ urlpatterns = [
     path('livro<int:livro_id>/', detalhes_livros, name='detalhes_livros'),
     path('search/', views.search_view, name='search_view'),
     path('cadastrar/', registration_views.register, name='register'),
-
     ]

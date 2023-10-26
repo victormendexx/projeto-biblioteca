@@ -286,6 +286,12 @@ footer {
     border-radius: 20px; /* Borda arredondada para a imagem */
 }
 
+.livro-image1 {
+    position: relative;
+    border-radius: 20px; /* Borda arredondada para a imagem */
+    margin: 10px;
+}
+
 .card1 {
     position: relative;
     width: 300px;
