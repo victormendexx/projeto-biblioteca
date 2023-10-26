@@ -120,3 +120,38 @@ Lembre-se de que, para implementar esta aplicação, você precisará do framewo
 # 1 criar a entrada logout no nav
 # 2 buscar quais configuracoes de login_url no settings.py
 # 3 
+
+
+
+
+# Avaliação por parte do grupo 3 - Entra21
+
+Instalação: 20/20
+Avaliação do arquivo README.md: 20/20
+Funcionalidades em tela apresentadas e com erros: 15/20
+Funcionalidades apresentadas em tela e incompleta sem a devida marcação: 18/20
+Percentual de aderência ao enunciado da questão: 20/20
+
+
+## Nota final: 93/100
+
+### Justificativas: 
+
+Filtro de busca não atende aos requisitos definidos no README, "Permitir que os usuários possam filtrar os livros por título, autor ou status." filtro apenas funciona para gênero e busca para título, incluindo acentos. 
+Sobre a função de "devolução" e "empréstimo" de livros, apesar de funcional para a apresentação, é implementada de maneira a possibilitar erros. Ao baixar um livro específico, todos os livros e imagens aparecem em "downloads", e para a devolução, mesmo devolvendo o livro correto, os livros continuam baixados. Além disso, é possível devolver o livro sem selecionar nenhum pdf.
+
+
+## Checklist:
+Modelagem de Dados: Ok
+Visualização de Livros: Ok
+Empréstimo de Livros: Ok
+Devolução de Livros: Ok
+Interface Amigável: Ok
+Página de Detalhes do Livro: Ok
+
+
+## Avaliadores:
+Fabio Henrique 
+Cristina Siewert Jansen
+Daianna Marques
+Guilherme Zago
