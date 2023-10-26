@@ -6,6 +6,20 @@ Desenvolver uma aplicação web utilizando Django que simule uma biblioteca virt
 ## Requisitos:
    - python v-3.10.12
    - django v-3.8
+
+## Banco de dados:
+   - Para visualizar os usuários criados no nosso registro, utilize a seguinte url "http://127.0.0.1:8000/admin/".
+   - OBS: o login para ver o conteúdo da url acima deve ser feito da seguinte forma no terminal.
+   - python manage.py createsuperuser
+   - Após este comando você deverá escolher um username e uma senha (recomendamos usar "admin" para os dois). Vale lembrar que o e-mail deve ficar em branco.
+
+## Comandos para executar antes de rodar a página:
+   - python3 -m venv venv
+   - pip install django
+   - cd projeto
+   - python manage.py makemigrations
+   - python manage.py migrate
+   - OBS: após executarem esses comandos você pode utilizar o python manage.py runserver para rodar a página django.
 ### 1. Modelagem de Dados:
    - Cada livro digital será representado por um dicionário com as seguintes informações: título, autor, editora, ano de publicação e status (disponível ou emprestado).
    - Os dicionários de livros serão armazenados em uma estrutura de dados adequada para facilitar as operações CRUD (por exemplo, uma lista de dicionários).
