@@ -15,11 +15,11 @@
 <p>Status: <span id="status">{{ status_info.status }}</span></p>
 
 <button id="pegarPdfButton" onclick="mostrarLink()">Pegar Emprestado</button>
-<button id="devolverPdfButton" style="display: none" onclick="devolverLivro()">Devolver</button>
 
 <a id="downloadPdfLink" href="{% static status_info.pdf_disponivel %}" download style="display: none" onclick="pegarLivro()">Download PDF</a>
 
 <input type="file" id="pdfUpload" style="display: none">
+<button id="devolverPdfButton" style="display: none" onclick="devolverLivro()">Devolver</button>
 
 <script>
     function mostrarLink() {
@@ -31,18 +31,18 @@
         document.getElementById("status").innerText = "Indisponível";
         
         document.getElementById("pegarPdfButton").style.display = "none";
-        document.getElementById("devolverPdfButton").style.display = "block";
         
         document.getElementById("pdfUpload").style.display = "block";
+        document.getElementById("devolverPdfButton").style.display = "block";
     }
 
     function devolverLivro() {
         document.getElementById("status").innerText = "Disponível";
         
         document.getElementById("pegarPdfButton").style.display = "block";
-        document.getElementById("devolverPdfButton").style.display = "none";
         
         document.getElementById("pdfUpload").style.display = "none";
+        document.getElementById("devolverPdfButton").style.display = "none";
     }
 </script>
 
