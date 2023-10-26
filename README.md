@@ -85,6 +85,16 @@ Lembre-se de que, para implementar esta aplicação, você precisará do framewo
 ### O que está nos impedindo?
    
 ---------------------------------------------------------------------------------------------------------------------------
+### - Daily 26/10/2023:
+### O que fizemos ontem?
+   - Ontem criamos o sistema de empréstimos de livros e o registro do usuário no site.
+
+### O que faremos hoje?
+   - Hoje a princípio iremos apresentar o nosso projeto feito.
+
+### O que está nos impedindo?
+   
+---------------------------------------------------------------------------------------------------------------------------
 ### Integrantes da equipe:
    - Ryan W.
    - Isabela R.
