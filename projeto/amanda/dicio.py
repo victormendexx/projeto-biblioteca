@@ -99,7 +99,7 @@ dicionario_principal = {
         "genero": "Biografia",
         "editora": "Crown",
         "ano_publicacao": "2018",
-        "idioma": "português",
+        "idioma": "ingles",
         "imagem": "img/becoming.jpg",
         "sinopse": "Nas suas memórias, uma obra de reflexão profunda e uma narrativa fascinante, Michelle Obama convida os leitores a entrar no seu mundo, relatando as experiências que a moldaram - desde a infância na zona sul de Chicago, passando pelos anos como executiva, equilibrando as exigências da maternidade e o trabalho, até ao tempo passado no endereço mais famoso do mundo. Terno, sábio e revelador, BECOMING é um relato íntimo de uma mulher de alma e substância que desafiou constantemente as expectativas - e cuja história nos inspira a fazer o mesmo."
     },
@@ -117,7 +117,7 @@ dicionario_principal = {
         "titulo": "O Silmarillion",
         "autor": "J. R. R. Tolkien",
         "genero": "Fantasia",
-        "editora": "WMF Martins Fontes  ",
+        "editora": "WMF Martins Fontes",
         "ano_publicacao": "2019",
         "idioma": "português",
         "imagem": "img/silmarillion.jpg",

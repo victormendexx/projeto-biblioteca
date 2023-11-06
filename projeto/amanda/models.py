@@ -9,12 +9,12 @@ class Comment(models.Model):
     def __str__(self):
         return self.name
     
-    
-# class UserProfile(models.Model):
-#     user = models.OneToOneField(User, on_delete=models.CASCADE)
-#     profile_image = models.ImageField(upload_to='profile_images/', blank=True, null=True)
-#     # Adicione outros campos personalizados
-
-#     def __str__(self):
-#         return self.user.username
-
+class Livro(models.Model):
+    titulo = models.CharField(max_length=100)
+    autor = models.CharField(max_length=100)
+    genero = models.CharField(max_length=50)
+    editora = models.CharField(max_length=100)
+    ano_publicacao = models.CharField(max_length=4)
+    idioma = models.CharField(max_length=50)
+    imagem = models.CharField(max_length=100)
+    sinopse = models.TextField()
