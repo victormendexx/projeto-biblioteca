@@ -18,3 +18,8 @@ class Livro(models.Model):
     idioma = models.CharField(max_length=50)
     imagem = models.CharField(max_length=100)
     sinopse = models.TextField()
+
+class Status(models.Model):
+    status = models.CharField(max_length=100)
+    pdf = models.CharField(max_length=100)
+    livro = models.ForeignKey(Livro, on_delete=models.CASCADE)
