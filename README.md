@@ -104,7 +104,10 @@ livro_emprestado = {
    - Hoje a princípio iremos apresentar o nosso projeto feito.
 
 ### O que está nos impedindo?
-   
+
+---------------------------------------------------------------------------------------------------------------------------
+### - Daily 06/11/2023:
+   -Fizemos com o professor
 ---------------------------------------------------------------------------------------------------------------------------
 ### Integrantes da equipe:
    - Ryan W.
