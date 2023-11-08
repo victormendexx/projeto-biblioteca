@@ -8,18 +8,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.name
-    
-class Livro(models.Model):
-    titulo = models.CharField(max_length=100)
-    autor = models.CharField(max_length=100)
-    genero = models.CharField(max_length=50)
-    editora = models.CharField(max_length=100)
-    ano_publicacao = models.CharField(max_length=4)
-    idioma = models.CharField(max_length=50)
-    imagem = models.CharField(max_length=100)
-    sinopse = models.TextField()
-
-class Status(models.Model):
-    status = models.CharField(max_length=100)
-    pdf = models.CharField(max_length=100)
-    livro = models.ForeignKey(Livro, on_delete=models.CASCADE)
