@@ -10,7 +10,7 @@ class Livro(models.Model):
     idioma = models.CharField(max_length=50)
     imagem = models.ImageField(upload_to='livros/')
     sinopse = models.TextField()
-    status = models.CharField(max_length=20, default="Disponível")
+    status = models.CharField(max_length=30, default="Disponível")
     pdf_disponivel = models.FileField(upload_to='pdfs/')
     def __str__(self):
         return self.titulo
