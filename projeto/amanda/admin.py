@@ -1,13 +1,19 @@
 from django.contrib import admin
-from .models import Livro, Avaliacao
+from .models import Livro, Autor, Genero, Editora
 
 @admin.register(Livro)
 class LivroAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'autor', 'genero', 'editora', 'ano_publicacao', 'status')
-    search_fields = ('titulo', 'autor', 'genero', 'editora')
-    list_filter = ('status', 'genero')
+    list_filter = ('status', 'genero', 'autor', 'editora')
 
-@admin.register(Avaliacao)
-class AvaliacaoAdmin(admin.ModelAdmin):
-    list_display = ('livro', 'nota', 'comentario')
-    list_filter = ('nota',)
+@admin.register(Autor)
+class AutorAdmin(admin.ModelAdmin):
+    list_display = ('autor',)
+
+@admin.register(Genero)
+class GeneroAdmin(admin.ModelAdmin):
+    list_display = ('genero',)
+
+@admin.register(Editora)
+class EditoraAdmin(admin.ModelAdmin):
+    list_display = ('editora',)
