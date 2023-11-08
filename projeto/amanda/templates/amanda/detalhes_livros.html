@@ -3,16 +3,20 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-<h2>Detalhes do Livro</h2>
-<img src="{% static livro.imagem %}" alt="{{ livro.titulo }}">
-<h3>{{ livro.titulo }}</h3>
-<p>Autor: {{ livro.autor }}</p>
-<p>Gênero: {{ livro.genero }}</p>
-<p>Editora: {{ livro.editora }}</p>
-<p>Ano de Publicação: {{ livro.ano_publicacao }}</p>
-<p>Idioma: {{ livro.idioma }}</p>
-<p>Sinopse: {{ livro.sinopse }}</p>
-<p>Status: <span id="status">{{ status_info.status }}</span></p>
+<div class="livro-container">
+    <div class="livro-image1">
+        <img src="{% static livro.imagem %}" alt="{{ livro.titulo }}">
+    </div>
+    <div class="livro-info">
+        <div class="titulolivros">
+            <h3>{{ livro.titulo }}</h3>
+        </div>
+        <p>Autor: {{ livro.autor }}</p><br>
+        <p>Gênero: {{ livro.genero }}</p><br>
+        <p>Ano de Publicação: {{ livro.ano_publicacao }}</p><br>
+        <p>Idioma: {{ livro.idioma }}</p><br>
+        <p>Sinopse: {{ livro.sinopse }}</p><br>
+        <p>Status: <span id="status">{{ status_info.status }}</span></p>
 
 <button id="pegarPdfButton" onclick="mostrarLink()">Pegar Emprestado</button>
 

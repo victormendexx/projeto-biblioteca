@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.views import LoginView, LogoutView
 from .dicio import dicionario_principal, filtrar_por_genero, obter_lista_generos, status_emprestimo
 from .forms import CatalogoFiltroForm
+from django.shortcuts import render
 # from .models import UserProfile 
 
 class LoginViewClass(LoginView):
