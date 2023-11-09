@@ -3,8 +3,6 @@ from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator
 from django.db.models import Avg
 
-
-
 class Autor(models.Model):
     id = models.AutoField(primary_key=True)
     autor = models.CharField(max_length=100)
