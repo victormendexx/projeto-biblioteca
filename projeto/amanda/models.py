@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator
+from django.db.models import Avg
+
 
 
 class Autor(models.Model):
@@ -55,6 +57,7 @@ class Livro(models.Model):
     status = models.CharField(max_length=30, default="Disponível")
     pdf_disponivel = models.FileField(upload_to='pdfs/')
 
+    @property
     def calcular_media_avaliacoes(self):
         return Avaliacao.objects.filter(livro=self).aggregate(Avg('nota'))['nota__avg']
     
