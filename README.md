@@ -107,13 +107,30 @@ livro_emprestado = {
 
 ---------------------------------------------------------------------------------------------------------------------------
 ### - Daily 06/11/2023:
+### O que fizemos ontem?
+
+### O que faremos hoje?
    -Fizemos com o professor
+
+### O que está nos impedindo?
+   
 ---------------------------------------------------------------------------------------------------------------------------
-### - Daily 06/11/2023:
+### - Daily 08/11/2023:
+### O que fizemos ontem?
+
+### O que faremos hoje?
    -Relacionamos a tabela e foi conferido os projetos
+
+ ### O que está nos impedindo?
+
 ---------------------------------------------------------------------------------------------------------------------------
 ### - Daily 09/11/2023:
-   -Hoje fizemos avaliação a media das notas e uma tabela a parte
+### O que fizemos ontem?
+   -Ontem foi conferido os projetos e relacionamos a tabela
+### O que faremos hoje?
+   -Hoje fizemos uma tabela no admin para avaliaçãoes e adicionamos uma propriedade para calcular a media das avaliações
+### O que está nos impedindo?
+
 ---------------------------------------------------------------------------------------------------------------------------
 ### Integrantes da equipe:
    - Ryan W.
