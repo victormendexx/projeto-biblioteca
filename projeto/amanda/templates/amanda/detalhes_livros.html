@@ -3,20 +3,51 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-<div class="livro-image">
-    <img src="{% static livro.imagem %}" alt="{{ livro.titulo }}">
-</div>
-<body>
-    <div class="infolivros" >
-        <div class="titulolivros" >
+<div class="livro-container">
+    <div class="livro-image1">
+        <img src="{% static livro.imagem %}" alt="{{ livro.titulo }}">
+    </div>
+    <div class="livro-info">
+        <div class="titulolivros">
             <h3>{{ livro.titulo }}</h3>
         </div>
-        <p>Autor: {{ livro.autor }}</p>
-        <p>Gênero: {{ livro.genero }}</p>   
-        <p>Ano de Publicação: {{ livro.ano_publicacao }}</p>
-        <p>Idioma: {{ livro.idioma }}</p>
-        <p>Sinopse: {{ livro.sinopse }}</p>
-        <a href="{% static livro.pdf %}" target="_blank">Baixar PDF</a>
-    </div>
-</body>
+        <p>Autor: {{ livro.autor }}</p><br>
+        <p>Gênero: {{ livro.genero }}</p><br>
+        <p>Ano de Publicação: {{ livro.ano_publicacao }}</p><br>
+        <p>Idioma: {{ livro.idioma }}</p><br>
+        <p>Sinopse: {{ livro.sinopse }}</p><br>
+        <p>Status: <span id="status">{{ status_info.status }}</span></p>
+
+<button id="pegarPdfButton" onclick="mostrarLink()">Pegar Emprestado</button>
+
+<a id="downloadPdfLink" href="{% static status_info.pdf_disponivel %}" download style="display: none" onclick="pegarLivro()">Download PDF</a>
+
+<input type="file" id="pdfUpload" style="display: none">
+<button id="devolverPdfButton" style="display: none" onclick="devolverLivro()">Devolver</button>
+
+<script>
+    function mostrarLink() {
+        document.getElementById("downloadPdfLink").style.display = "block";
+    }
+    function pegarLivro() {
+        document.getElementById("downloadPdfLink").style.display = "none";
+
+        document.getElementById("status").innerText = "Indisponível";
+        
+        document.getElementById("pegarPdfButton").style.display = "none";
+        
+        document.getElementById("pdfUpload").style.display = "block";
+        document.getElementById("devolverPdfButton").style.display = "block";
+    }
+
+    function devolverLivro() {
+        document.getElementById("status").innerText = "Disponível";
+        
+        document.getElementById("pegarPdfButton").style.display = "block";
+        
+        document.getElementById("pdfUpload").style.display = "none";
+        document.getElementById("devolverPdfButton").style.display = "none";
+    }
+</script>
+
 {% endblock %}

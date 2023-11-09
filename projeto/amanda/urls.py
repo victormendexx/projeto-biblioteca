@@ -1,6 +1,6 @@
 from django.urls import path
 from amanda.views import inicio, sobre, catalogo, detalhes_livros
-from registration import views as registration_views
+from registro import views as registration_views
 from amanda.views import LoginViewClass, LogoutViewClass
 from . import views
 
@@ -14,5 +14,4 @@ urlpatterns = [
     path('livro<int:livro_id>/', detalhes_livros, name='detalhes_livros'),
     path('search/', views.search_view, name='search_view'),
     path('cadastrar/', registration_views.register, name='register'),
-
     ]

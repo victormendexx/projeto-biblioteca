@@ -6,6 +6,20 @@ Desenvolver uma aplicação web utilizando Django que simule uma biblioteca virt
 ## Requisitos:
    - python v-3.10.12
    - django v-3.8
+
+## Banco de dados:
+   - Para visualizar os usuários criados no nosso registro, utilize a seguinte url "http://127.0.0.1:8000/admin/".
+   - OBS: o login para ver o conteúdo da url acima deve ser feito da seguinte forma no terminal.
+   - python manage.py createsuperuser
+   - Após este comando você deverá escolher um username e uma senha (recomendamos usar "admin" para os dois). Vale lembrar que o e-mail deve ficar em branco.
+
+## Comandos para executar antes de rodar a página:
+   - python3 -m venv venv
+   - pip install django
+   - cd projeto
+   - python manage.py makemigrations
+   - python manage.py migrate
+   - OBS: após executarem esses comandos você pode utilizar o python manage.py runserver para rodar a página django.
 ### 1. Modelagem de Dados:
    - Cada livro digital será representado por um dicionário com as seguintes informações: título, autor, editora, ano de publicação e status (disponível ou emprestado).
    - Os dicionários de livros serão armazenados em uma estrutura de dados adequada para facilitar as operações CRUD (por exemplo, uma lista de dicionários).
@@ -24,7 +38,7 @@ publicacoes = [
 ```
 ### 2. Visualização de Livros:
    - Implementar uma página que liste todos os livros disponíveis na biblioteca virtual, mostrando suas informações básicas.
-   - Permitir que os usuários possam filtrar os livros por título, autor ou status.
+   - Permitir que os usuários possam filtrar os livros por título.
 ### 3. Empréstimo de Livros:
    - Implementar uma funcionalidade que permita aos usuários emprestar um livro. Ao emprestar um livro, o status do livro deve mudar para "emprestado".
 ```python
@@ -48,9 +62,6 @@ livro_emprestado = {
 ### - Sistema de Contas de Usuário (Sem persistência de dados):
    - Criar um sistema simples de contas de usuário onde os usuários possam fazer login com um nome de usuário.
    - Rastrear quais livros estão emprestados para cada usuário.
-### - Histórico de Empréstimos:
-   - Implementar uma funcionalidade que permita aos usuários visualizar um histórico de todos os livros que eles emprestaram e devolveram.
-Lembre-se de que, para implementar esta aplicação, você precisará do framework Django e deve seguir as melhores práticas de desenvolvimento web para garantir a segurança e a eficiência da aplicação. Boa sorte!
 ---------------------------------------------------------------------------------------------------------------------------
 ### - Daily 11/10/2023:
 ### O que fizemos ontem?
@@ -85,6 +96,16 @@ Lembre-se de que, para implementar esta aplicação, você precisará do framewo
 ### O que está nos impedindo?
    
 ---------------------------------------------------------------------------------------------------------------------------
+### - Daily 26/10/2023:
+### O que fizemos ontem?
+   - Ontem criamos o sistema de empréstimos de livros e o registro do usuário no site.
+
+### O que faremos hoje?
+   - Hoje a princípio iremos apresentar o nosso projeto feito.
+
+### O que está nos impedindo?
+   
+---------------------------------------------------------------------------------------------------------------------------
 ### Integrantes da equipe:
    - Ryan W.
    - Isabela R.
@@ -96,3 +117,37 @@ Lembre-se de que, para implementar esta aplicação, você precisará do framewo
 # 1 criar a entrada logout no nav
 # 2 buscar quais configuracoes de login_url no settings.py
 # 3 
+
+
+
+
+# Avaliação por parte do grupo 3 - Entra21
+
+Instalação: 20/20
+Avaliação do arquivo README.md: 20/20
+Funcionalidades em tela apresentadas e com erros: 20/20
+Funcionalidades apresentadas em tela e incompleta sem a devida marcação: 18/20
+Percentual de aderência ao enunciado da questão: 20/20
+
+
+## Nota final: 98/100
+
+### Justificativas: 
+
+Filtro de busca não atende aos requisitos definidos no README, "Permitir que os usuários possam filtrar os livros por título, autor ou status." filtro apenas funciona para gênero e busca para título, incluindo acentos. 
+
+
+## Checklist:
+Modelagem de Dados: Ok
+Visualização de Livros: Ok
+Empréstimo de Livros: Ok
+Devolução de Livros: Ok
+Interface Amigável: Ok
+Página de Detalhes do Livro: Ok
+
+
+## Avaliadores:
+Fabio Henrique 
+Cristina Siewert Jansen
+Daianna Marques
+Guilherme Zago
