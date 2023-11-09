@@ -15,9 +15,12 @@ class EditoraAdmin(admin.ModelAdmin):
 
 @admin.register(Livro)
 class LivroAdmin(admin.ModelAdmin):
-    list_display = ('titulo', 'autor', 'genero', 'editora', 'ano_publicacao', 'calcular_media_avaliacoes')
-    list_filter = ('autor', 'genero', 'editora')
-    search_fields = ('titulo', 'autor__autor', 'genero__genero', 'editora__editora')
+    list_display = ('titulo', 'nota_media_display')
+    readonly_fields = ('nota_media_display',)
+
+    def nota_media_display(self, obj):
+        return obj.nota_media
+    nota_media_display.short_description = 'Nota Média'
     
 @admin.register(Avaliacao)
 class AvaliacaoAdmin(admin.ModelAdmin):

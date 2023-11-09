@@ -56,7 +56,7 @@ class Livro(models.Model):
     pdf_disponivel = models.FileField(upload_to='pdfs/')
 
     @property
-    def calcular_media_avaliacoes(self):
+    def nota_media(self):
         return Avaliacao.objects.filter(livro=self).aggregate(Avg('nota'))['nota__avg']
     
     def __str__(self):
