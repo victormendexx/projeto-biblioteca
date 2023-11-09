@@ -1,0 +1,1393 @@
+[
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2023-11-08T17:39:52.777Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "1",
+            "object_repr": "Terror",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2023-11-08T17:40:38.393Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "1",
+            "object_repr": "Stephen King 1",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2023-11-08T17:41:50.305Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "1",
+            "object_repr": "Suma",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2023-11-08T17:44:10.344Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "1",
+            "object_repr": "It - A Coisa 1",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2023-11-08T18:42:41.120Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "2",
+            "object_repr": "Romance",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2023-11-08T18:42:47.587Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "3",
+            "object_repr": "Suspense",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2023-11-08T18:43:03.405Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "4",
+            "object_repr": "Bibliografia",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2023-11-08T18:43:48.632Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "5",
+            "object_repr": "Fantasia",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2023-11-08T18:44:05.796Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "6",
+            "object_repr": "Ficção",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2023-11-08T18:44:27.775Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "4",
+            "object_repr": "Biografia",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Genero\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2023-11-08T18:44:39.753Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "7",
+            "object_repr": "Mistério",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 12,
+        "fields": {
+            "action_time": "2023-11-08T18:47:09.136Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "8",
+            "object_repr": "Distopia",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 13,
+        "fields": {
+            "action_time": "2023-11-08T18:47:31.432Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "2",
+            "object_repr": "Intrínseca",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 14,
+        "fields": {
+            "action_time": "2023-11-08T18:47:41.811Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "3",
+            "object_repr": "Outro Planeta",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 15,
+        "fields": {
+            "action_time": "2023-11-08T18:48:00.961Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "4",
+            "object_repr": "WMF Martins Fontes",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 16,
+        "fields": {
+            "action_time": "2023-11-08T18:48:08.427Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "5",
+            "object_repr": "Paralela",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 17,
+        "fields": {
+            "action_time": "2023-11-08T18:48:20.505Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "6",
+            "object_repr": "Crown",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 18,
+        "fields": {
+            "action_time": "2023-11-08T18:48:29.444Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "7",
+            "object_repr": "Record",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 19,
+        "fields": {
+            "action_time": "2023-11-08T18:48:40.770Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "8",
+            "object_repr": "Rocco Jovens Leitores",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 20,
+        "fields": {
+            "action_time": "2023-11-08T18:48:49.899Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "9",
+            "object_repr": "Bertrand Editora",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 21,
+        "fields": {
+            "action_time": "2023-11-08T18:48:58.533Z",
+            "user": 1,
+            "content_type": 9,
+            "object_id": "10",
+            "object_repr": "Bloomsbury Publishing",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 22,
+        "fields": {
+            "action_time": "2023-11-08T18:49:20.914Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "2",
+            "object_repr": "John Green",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 23,
+        "fields": {
+            "action_time": "2023-11-08T18:49:33.862Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "3",
+            "object_repr": "J. K. Rowling",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 24,
+        "fields": {
+            "action_time": "2023-11-08T18:49:44.522Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "4",
+            "object_repr": "Suzanne Collins",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 25,
+        "fields": {
+            "action_time": "2023-11-08T18:49:55.433Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "5",
+            "object_repr": "Paula Hawkins",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 26,
+        "fields": {
+            "action_time": "2023-11-08T18:50:07.657Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "6",
+            "object_repr": "Michelle Obama",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 27,
+        "fields": {
+            "action_time": "2023-11-08T18:50:16.437Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "7",
+            "object_repr": "Taylor Jenkins Reid",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 28,
+        "fields": {
+            "action_time": "2023-11-08T18:50:28.113Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "8",
+            "object_repr": "J. R. R. Tolkien",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 29,
+        "fields": {
+            "action_time": "2023-11-08T18:50:39.563Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "9",
+            "object_repr": "Tillie Cole",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 30,
+        "fields": {
+            "action_time": "2023-11-08T18:50:49.399Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "10",
+            "object_repr": "C. J. Tudor",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 31,
+        "fields": {
+            "action_time": "2023-11-08T18:52:08.428Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "2",
+            "object_repr": "O Homem de Giz 2",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 32,
+        "fields": {
+            "action_time": "2023-11-08T18:53:26.007Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "3",
+            "object_repr": "Mil Beijos de Garoto 3",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 33,
+        "fields": {
+            "action_time": "2023-11-08T18:54:36.289Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "4",
+            "object_repr": "O Silmarillion 4",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 34,
+        "fields": {
+            "action_time": "2023-11-08T18:56:03.616Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "5",
+            "object_repr": "Os Sete Maridos de Evelyn Hugo 5",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 35,
+        "fields": {
+            "action_time": "2023-11-08T18:57:36.835Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "6",
+            "object_repr": "Becoming 6",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 36,
+        "fields": {
+            "action_time": "2023-11-08T18:58:37.839Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "7",
+            "object_repr": "A Garota no Trem 7",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 37,
+        "fields": {
+            "action_time": "2023-11-08T19:00:16.639Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "8",
+            "object_repr": "Jogos Vorazes 8",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 38,
+        "fields": {
+            "action_time": "2023-11-08T19:01:26.838Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "9",
+            "object_repr": "Harry Potter e a Pedra Filosofal 9",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 39,
+        "fields": {
+            "action_time": "2023-11-08T19:02:43.603Z",
+            "user": 1,
+            "content_type": 8,
+            "object_id": "10",
+            "object_repr": "A Culpa é das Estrelas 10",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 1,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 1,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 1,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 1,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 2,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 2,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 2,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 2,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 3,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 3,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 3,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 3,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 4,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 4,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 4,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 4,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 5,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 5,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 5,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 5,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 6,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 6,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 6,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 6,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add avaliacao",
+            "content_type": 7,
+            "codename": "add_avaliacao"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change avaliacao",
+            "content_type": 7,
+            "codename": "change_avaliacao"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete avaliacao",
+            "content_type": 7,
+            "codename": "delete_avaliacao"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view avaliacao",
+            "content_type": 7,
+            "codename": "view_avaliacao"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add livro",
+            "content_type": 8,
+            "codename": "add_livro"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change livro",
+            "content_type": 8,
+            "codename": "change_livro"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete livro",
+            "content_type": 8,
+            "codename": "delete_livro"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view livro",
+            "content_type": 8,
+            "codename": "view_livro"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add editora",
+            "content_type": 9,
+            "codename": "add_editora"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change editora",
+            "content_type": 9,
+            "codename": "change_editora"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete editora",
+            "content_type": 9,
+            "codename": "delete_editora"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view editora",
+            "content_type": 9,
+            "codename": "view_editora"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add genero",
+            "content_type": 10,
+            "codename": "add_genero"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change genero",
+            "content_type": 10,
+            "codename": "change_genero"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete genero",
+            "content_type": 10,
+            "codename": "delete_genero"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view genero",
+            "content_type": 10,
+            "codename": "view_genero"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can add Autor",
+            "content_type": 11,
+            "codename": "add_autor"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can change Autor",
+            "content_type": 11,
+            "codename": "change_autor"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can delete Autor",
+            "content_type": 11,
+            "codename": "delete_autor"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can view Autor",
+            "content_type": 11,
+            "codename": "view_autor"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$LF8qzCtpijhbUOf0YZ0jJJ$in31URQ1jPkmtjJp5iyJVp8hIwa+aSs8yvukEu8/vqg=",
+            "last_login": "2023-11-08T18:46:58.597Z",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-11-08T16:54:27.882Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$dkJ5S6Eq2MRhHR1ue04C1T$t9By1ZQmt14ynca76OUdySYpqAz/CNbWSylHdzQjjxU=",
+            "last_login": "2023-11-08T18:45:35.477Z",
+            "is_superuser": false,
+            "username": "aaa",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-11-08T18:45:21.798Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "auth",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "amanda",
+            "model": "avaliacao"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "amanda",
+            "model": "livro"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "amanda",
+            "model": "editora"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 10,
+        "fields": {
+            "app_label": "amanda",
+            "model": "genero"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 11,
+        "fields": {
+            "app_label": "amanda",
+            "model": "autor"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "yhgk91nsmz7mnkz1egll80k85buxn2g9",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlne9TeU9JzB8q4dHECOFCcV4u4QKQW0b2beS8S0rTVuvSxxyuIsQJx-N0r8KG0H-Z7abZY8t3WZSO6KPGiX1zmX5-Vw_w5q6vVbF5dw1MB50KCyDYho0CJaKpqVKwAcSJlECkdiz1Ybp9XgbWDA7EG8P8kNNu0:1r0nZq:QLMjpl_QRWRPzy8Bc-UKRlfxrHQANS43DQqZwaP2H2A",
+            "expire_date": "2023-11-22T18:46:58.932Z"
+        }
+    },
+    {
+        "model": "amanda.autor",
+        "pk": 1,
+        "fields": {
+            "autor": "Stephen King"
+        }
+    },
+    {
+        "model": "amanda.autor",
+        "pk": 2,
+        "fields": {
+            "autor": "John Green"
+        }
+    },
+    {
+        "model": "amanda.autor",
+        "pk": 3,
+        "fields": {
+            "autor": "J. K. Rowling"
+        }
+    },
+    {
+        "model": "amanda.autor",
+        "pk": 4,
+        "fields": {
+            "autor": "Suzanne Collins"
+        }
+    },
+    {
+        "model": "amanda.autor",
+        "pk": 5,
+        "fields": {
+            "autor": "Paula Hawkins"
+        }
+    },
+    {
+        "model": "amanda.autor",
+        "pk": 6,
+        "fields": {
+            "autor": "Michelle Obama"
+        }
+    },
+    {
+        "model": "amanda.autor",
+        "pk": 7,
+        "fields": {
+            "autor": "Taylor Jenkins Reid"
+        }
+    },
+    {
+        "model": "amanda.autor",
+        "pk": 8,
+        "fields": {
+            "autor": "J. R. R. Tolkien"
+        }
+    },
+    {
+        "model": "amanda.autor",
+        "pk": 9,
+        "fields": {
+            "autor": "Tillie Cole"
+        }
+    },
+    {
+        "model": "amanda.autor",
+        "pk": 10,
+        "fields": {
+            "autor": "C. J. Tudor"
+        }
+    },
+    {
+        "model": "amanda.genero",
+        "pk": 1,
+        "fields": {
+            "genero": "Terror"
+        }
+    },
+    {
+        "model": "amanda.genero",
+        "pk": 2,
+        "fields": {
+            "genero": "Romance"
+        }
+    },
+    {
+        "model": "amanda.genero",
+        "pk": 3,
+        "fields": {
+            "genero": "Suspense"
+        }
+    },
+    {
+        "model": "amanda.genero",
+        "pk": 4,
+        "fields": {
+            "genero": "Biografia"
+        }
+    },
+    {
+        "model": "amanda.genero",
+        "pk": 5,
+        "fields": {
+            "genero": "Fantasia"
+        }
+    },
+    {
+        "model": "amanda.genero",
+        "pk": 6,
+        "fields": {
+            "genero": "Ficção"
+        }
+    },
+    {
+        "model": "amanda.genero",
+        "pk": 7,
+        "fields": {
+            "genero": "Mistério"
+        }
+    },
+    {
+        "model": "amanda.genero",
+        "pk": 8,
+        "fields": {
+            "genero": "Distopia"
+        }
+    },
+    {
+        "model": "amanda.editora",
+        "pk": 1,
+        "fields": {
+            "editora": "Suma"
+        }
+    },
+    {
+        "model": "amanda.editora",
+        "pk": 2,
+        "fields": {
+            "editora": "Intrínseca"
+        }
+    },
+    {
+        "model": "amanda.editora",
+        "pk": 3,
+        "fields": {
+            "editora": "Outro Planeta"
+        }
+    },
+    {
+        "model": "amanda.editora",
+        "pk": 4,
+        "fields": {
+            "editora": "WMF Martins Fontes"
+        }
+    },
+    {
+        "model": "amanda.editora",
+        "pk": 5,
+        "fields": {
+            "editora": "Paralela"
+        }
+    },
+    {
+        "model": "amanda.editora",
+        "pk": 6,
+        "fields": {
+            "editora": "Crown"
+        }
+    },
+    {
+        "model": "amanda.editora",
+        "pk": 7,
+        "fields": {
+            "editora": "Record"
+        }
+    },
+    {
+        "model": "amanda.editora",
+        "pk": 8,
+        "fields": {
+            "editora": "Rocco Jovens Leitores"
+        }
+    },
+    {
+        "model": "amanda.editora",
+        "pk": 9,
+        "fields": {
+            "editora": "Bertrand Editora"
+        }
+    },
+    {
+        "model": "amanda.editora",
+        "pk": 10,
+        "fields": {
+            "editora": "Bloomsbury Publishing"
+        }
+    },
+    {
+        "model": "amanda.livro",
+        "pk": 1,
+        "fields": {
+            "titulo": "It - A Coisa",
+            "autor": 1,
+            "genero": 1,
+            "editora": 1,
+            "ano_publicacao": 1986,
+            "idioma": "Português",
+            "imagem": "livros/itacoisa.jpg",
+            "sinopse": "Um grupo de crianças se une para investigar o misterioso desaparecimento de vários jovens em sua cidade. Eles descobrem que o culpado é Pennywise, um palhaço cruel que se alimenta de seus medos e cuja violência teve origem há vários séculos.",
+            "status": "Disponível",
+            "pdf_disponivel": "pdfs/it__-__a_coisa.pdf"
+        }
+    },
+    {
+        "model": "amanda.livro",
+        "pk": 2,
+        "fields": {
+            "titulo": "O Homem de Giz",
+            "autor": 10,
+            "genero": 3,
+            "editora": 2,
+            "ano_publicacao": 2018,
+            "idioma": "Português",
+            "imagem": "livros/ohomemdegiz.jpg",
+            "sinopse": "Assassinato e sinais misteriosos em uma trama para fãs de Stranger Things e Stephen King. Em 1986, Eddie e os amigos passam a maior parte dos dias andando de bicicleta pela pacata vizinhança em busca de aventuras. Os desenhos a giz são seu código secreto: homenzinhos rabiscados no asfalto; mensagens que só eles entendem.",
+            "status": "Disponível",
+            "pdf_disponivel": "pdfs/o_homem_de_giz.pdf"
+        }
+    },
+    {
+        "model": "amanda.livro",
+        "pk": 3,
+        "fields": {
+            "titulo": "Mil Beijos de Garoto",
+            "autor": 9,
+            "genero": 2,
+            "editora": 3,
+            "ano_publicacao": 2018,
+            "idioma": "Português",
+            "imagem": "livros/milbeijosdegaroto.jpg",
+            "sinopse": "Quando, aos dezessete anos, Rune Kristiansen retorna da Noruega para o lugar onde passou a infância – a cidade americana de Blossom Grove, na Geórgia –, ele só tem uma coisa em mente: reencontrar Poppy Litchfield, a garota que era sua cara-metade e que tinha prometido esperar fielmente por seu retorno.",
+            "status": "Disponível",
+            "pdf_disponivel": "pdfs/mil_beijos_de_garoto.pdf"
+        }
+    },
+    {
+        "model": "amanda.livro",
+        "pk": 4,
+        "fields": {
+            "titulo": "O Silmarillion",
+            "autor": 8,
+            "genero": 5,
+            "editora": 4,
+            "ano_publicacao": 2019,
+            "idioma": "Português",
+            "imagem": "livros/silmarillion.jpg",
+            "sinopse": "Quando o primeiro Senhor das Trevas, Morgoth, rouba as joias e as coloca numa coroa de ferro na impenetrável fortaleza de Angband, Fëanor e os seus familiares pegam em armas contra os deuses e travam uma longa e terrível guerra para recuperá-las.",
+            "status": "Disponível",
+            "pdf_disponivel": "pdfs/o_silmarillion.pdf"
+        }
+    },
+    {
+        "model": "amanda.livro",
+        "pk": 5,
+        "fields": {
+            "titulo": "Os Sete Maridos de Evelyn Hugo",
+            "autor": 7,
+            "genero": 6,
+            "editora": 5,
+            "ano_publicacao": 2017,
+            "idioma": "Português",
+            "imagem": "livros/ossetemaridos.jpg",
+            "sinopse": "Da chegada a Hollywood no início da década de 1950 à decisão de abandonar o mundo do espetáculo 30 anos depois, incluindo, claro está, os seus sete casamentos, a vida de Evelyn é repleta de ambição desmedida, amizades improváveis e um grande amor proibido.",
+            "status": "Disponível",
+            "pdf_disponivel": "pdfs/os_sete_maridos_de_evelyn_hugo.pdf"
+        }
+    },
+    {
+        "model": "amanda.livro",
+        "pk": 6,
+        "fields": {
+            "titulo": "Becoming",
+            "autor": 6,
+            "genero": 4,
+            "editora": 6,
+            "ano_publicacao": 2018,
+            "idioma": "Inglês",
+            "imagem": "livros/becoming.jpg",
+            "sinopse": "Nas suas memórias, uma obra de reflexão profunda e uma narrativa fascinante, Michelle Obama convida os leitores a entrar no seu mundo, relatando as experiências que a moldaram - desde a infância na zona sul de Chicago, passando pelos anos como executiva, equilibrando as exigências da maternidade e o trabalho, até ao tempo passado no endereço mais famoso do mundo. Terno, sábio e revelador, BECOMING é um relato íntimo de uma mulher de alma e substância que desafiou constantemente as expectativas - e cuja história nos inspira a fazer o mesmo.",
+            "status": "Disponível",
+            "pdf_disponivel": "pdfs/becoming.pdf"
+        }
+    },
+    {
+        "model": "amanda.livro",
+        "pk": 7,
+        "fields": {
+            "titulo": "A Garota no Trem",
+            "autor": 5,
+            "genero": 7,
+            "editora": 7,
+            "ano_publicacao": 2015,
+            "idioma": "Português",
+            "imagem": "livros/agarotanotrem.jpg",
+            "sinopse": "Um thriller psicológico que vai mudar para sempre a maneira como você observa a vida das pessoas ao seu redor. Todas as manhãs Rachel pega o trem das 8h04 de Ashbury para Londres. O arrastar trepidante pelos trilhos faz parte de sua rotina.",
+            "status": "Disponível",
+            "pdf_disponivel": "pdfs/a_garota_no_trem.pdf"
+        }
+    },
+    {
+        "model": "amanda.livro",
+        "pk": 8,
+        "fields": {
+            "titulo": "Jogos Vorazes",
+            "autor": 4,
+            "genero": 8,
+            "editora": 8,
+            "ano_publicacao": 2010,
+            "idioma": "Português",
+            "imagem": "livros/jogosvorazes.jpg",
+            "sinopse": "Quando Katniss Everdeen, de 16 anos, decide participar dos Jogos Vorazes para poupar a irmã mais nova, causando grande comoção no país, ela sabe que essa pode ser a sua sentença de morte. Mas a jovem usa toda a sua habilidade de caça e sobrevivência ao ar livre para se manter viva.",
+            "status": "Disponível",
+            "pdf_disponivel": "pdfs/jogos_vorazes.pdf"
+        }
+    },
+    {
+        "model": "amanda.livro",
+        "pk": 9,
+        "fields": {
+            "titulo": "Harry Potter e a Pedra Filosofal",
+            "autor": 3,
+            "genero": 5,
+            "editora": 10,
+            "ano_publicacao": 1997,
+            "idioma": "Português",
+            "imagem": "livros/harrypotter.jpg",
+            "sinopse": "Descobre sua verdadeira história e seu destino: ser um aprendiz de feiticeiro até o dia em que terá que enfrentar a pior força do mal, o homem que assassinou seus pais. O menino de olhos verde, magricela e desengonçado, tão habituado à rejeição, descobre, também, que é um herói no universo dos magos.",
+            "status": "Disponível",
+            "pdf_disponivel": "pdfs/harry_potter_e_a_pedra_filosofal.pdf"
+        }
+    },
+    {
+        "model": "amanda.livro",
+        "pk": 10,
+        "fields": {
+            "titulo": "A Culpa é das Estrelas",
+            "autor": 2,
+            "genero": 2,
+            "editora": 2,
+            "ano_publicacao": 2012,
+            "idioma": "Português",
+            "imagem": "livros/aculpaedasestrelas.jpg",
+            "sinopse": "A Culpa é das Estrelas é um livro emocionante, que trata do amor de dois jovens aprendendo desde cedo a lidar com o fato de que poderão ser afastados um do outro a qualquer momento. Apesar disso, a história de John Green mostra que é possível driblar as dificuldades para alcançar ao menos um pouco de alegria.",
+            "status": "Disponível",
+            "pdf_disponivel": "pdfs/a_culpa_e_das_estrelas.pdf"
+        }
+    }
+]
