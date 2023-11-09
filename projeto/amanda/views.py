@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.views import LoginView, LogoutView
-from .dicio import dicionario_principal, filtrar_por_genero, obter_lista_generos
+from .dicio import dicionario_principal, filtrar_por_genero, obter_lista_generos, status_emprestimo
 from .forms import CatalogoFiltroForm
+from django.shortcuts import render
 # from .models import UserProfile 
 
 class LoginViewClass(LoginView):
@@ -50,10 +51,10 @@ def catalogo(request):
     return render(request, 'amanda/catalogo.html', context)
 
 def detalhes_livros(request, livro_id):
-    chave = int(livro_id)
-    livro = dicionario_principal.get(chave)
-    descricao = "Descrição: Aqui você pode adicionar uma descrição sobre a história do livro."
-    return render(request, 'amanda/detalhes_livros.html', {'livro': livro, 'descricao': descricao})
+    livro = dicionario_principal.get(livro_id)
+    status_info = status_emprestimo.get(f"livro{livro_id}")
+    
+    return render(request, 'amanda/detalhes_livros.html', {'livro': livro, 'status_info': status_info})
 
 def search_view(request):
     query = request.GET.get('q', '')  # Obtenha os termos de pesquisa da URL
@@ -70,4 +71,3 @@ def search_view(request):
     }
 
     return render(request, 'amanda/search_results.html', context)
-
