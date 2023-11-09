@@ -1,4 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.core.validators import MaxValueValidator
+
 
 class Autor(models.Model):
     id = models.AutoField(primary_key=True)
@@ -51,6 +54,9 @@ class Livro(models.Model):
     sinopse = models.TextField()
     status = models.CharField(max_length=30, default="Disponível")
     pdf_disponivel = models.FileField(upload_to='pdfs/')
+
+    def calcular_media_avaliacoes(self):
+        return Avaliacao.objects.filter(livro=self).aggregate(Avg('nota'))['nota__avg']
     
     def __str__(self):
         return f"{self.titulo} ({self.id})"
@@ -62,9 +68,12 @@ class Livro(models.Model):
         verbose_name_plural = 'Livros'
 
 class Avaliacao(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key=True)  # Adicione a propriedade "ID"
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     livro = models.ForeignKey(Livro, on_delete=models.CASCADE)
-    nota = models.IntegerField()
+    nota = models.FloatField(
+        validators=[MaxValueValidator(limit_value=5.0)]
+    )
     comentario = models.TextField()
 
     def __str__(self):
@@ -75,3 +84,9 @@ class Avaliacao(models.Model):
 
         verbose_name = 'Avaliação'
         verbose_name_plural = 'Avaliações'
+
+
+
+
+
+

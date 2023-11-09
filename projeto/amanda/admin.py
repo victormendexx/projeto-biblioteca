@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Livro, Autor, Genero, Editora
+from .models import Livro, Autor, Genero, Editora, Avaliacao
 
 @admin.register(Livro)
 class LivroAdmin(admin.ModelAdmin):
@@ -17,3 +17,10 @@ class GeneroAdmin(admin.ModelAdmin):
 @admin.register(Editora)
 class EditoraAdmin(admin.ModelAdmin):
     list_display = ('editora',)
+
+class AvaliacaoAdmin(admin.ModelAdmin):
+    list_display = ('user', 'livro', 'nota', 'comentario')
+    list_filter = ('livro',)
+    search_fields = ('user__username', 'livro__titulo')
+    
+admin.site.register(Avaliacao, AvaliacaoAdmin)
