@@ -107,19 +107,13 @@ livro_emprestado = {
 
 ---------------------------------------------------------------------------------------------------------------------------
 ### - Daily 06/11/2023:
-### O que fizemos ontem?
-
-### O que faremos hoje?
-   -Fizemos com o professor
-
-### O que está nos impedindo?
-   
+   -A daily foi feita com o professor
 ---------------------------------------------------------------------------------------------------------------------------
 ### - Daily 08/11/2023:
 ### O que fizemos ontem?
-
+   -
 ### O que faremos hoje?
-   -Relacionamos a tabela e foi conferido os projetos
+   -Relacionamos a tabela e alguns projetos foram conferidos e corrigidos
 
  ### O que está nos impedindo?
 
